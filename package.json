@@ -1,0 +1,21 @@
+{
+  "name": "agence",
+  "version": "1.0.0",
+  "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./css/base.css -o ./css/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./css/base.css -o ./css/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.univ-lr.fr:lpmiaw-2025-2026/ancreo/agence.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}
