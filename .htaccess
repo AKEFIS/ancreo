@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+
+# Sert a reecrire l'url -> ancreo/page.html devient ancreo/page
+RewriteRule ^([^/]+)$ $1.html [L]
