@@ -5,4 +5,9 @@
   --gray: #d0d0d0;
   --accentuationSombre: #6ed6e0;
   --accentuationClair: #1a00ff;
+
+  /* Typography */
+  --font-montserrat: "Montserrat Alternates", sans-serif;
+
+  /* Font sizes */
 }
