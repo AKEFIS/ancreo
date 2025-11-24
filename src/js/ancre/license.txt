@@ -1,0 +1,11 @@
+Model Information:
+* title:	Heavy Rusty Anchor
+* source:	https://sketchfab.com/3d-models/heavy-rusty-anchor-3f95a9814ab14cf78e4999e990ac82ff
+* author:	Incg5764 (https://sketchfab.com/incg5764)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Heavy Rusty Anchor" (https://sketchfab.com/3d-models/heavy-rusty-anchor-3f95a9814ab14cf78e4999e990ac82ff) by Incg5764 (https://sketchfab.com/incg5764) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
