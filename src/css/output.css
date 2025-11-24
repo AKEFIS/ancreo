@@ -1,5 +1,4 @@
 /*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
-@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -382,6 +381,10 @@
 .text16 {
   font-family: var(--montserrat);
   font-size: 16px;
+}
+.text20 {
+  font-family: var(--montserrat);
+  font-size: 20px;
 }
 .text24 {
   font-family: var(--montserrat);
