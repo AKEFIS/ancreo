@@ -31,7 +31,7 @@ scene.add(light);
 const loader = new GLTFLoader();
 let model = null;
 
-loader.load('./js/ancre/scene.gltf', (gltf) => {
+loader.load('./src/js/ancre/scene.gltf', (gltf) => {
     model = gltf.scene;
     model.scale.set(1, 1, 1);
     model.position.set(0, 0, 0);
