@@ -14,13 +14,13 @@
         }
       }
     </script>
-    <script type="module" src="./js/hero.js"></script>
+    <script type="module" src="/src/js/hero.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <!-- TAILWIND -->
-    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="/src/css/output.css" />
     <style>
       #container {
         position: fixed;
@@ -84,8 +84,9 @@
     
     <!-- Contenu à gauche -->
     <div class="w-1/2 pl-20 text-white flex flex-col justify-center relative z-10 pb-60">
-      <h1 class="title64 font-bold mb-4">Ancreo</h1>
-      <p class="text-lg leading-relaxed">Agence web spécialisée dans l'accompagnement des auto-entrepreneurs</p>
+      <h1 class="title64 mb-4">Ancreo</h1>
+      <h2 class="title32 font-bold mb-4">Votre nouvelle agence web à La Rochelle</h2>
+      <p class="text-lg leading-relaxed">Notre agence propose un accompagnement personalisé et adapté pour les <strong class="text-blue-300 font-extrabold">entreprises, start-up, futurs entrepreneurs</strong> et bien plus !</p>
     </div>
 
     <div class="absolute bottom-0 left-0 right-0 text-center text-white pb-8 z-10">
