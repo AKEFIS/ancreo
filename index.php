@@ -79,11 +79,11 @@
     ]
     </script> -->
   </head>
-  <body class="bg-blue-950 h-svh flex">
-    <div id="container"></div>
+  <body class="bg-black h-svh flex">
+    <div id="container" class="invisible sm:visible"></div>
     
     <!-- Contenu à gauche -->
-    <div class="w-1/2 pl-20 text-white flex flex-col justify-center relative z-10 pb-60">
+    <div class="w-full sm:w-1/2 p-4 sm:pl-20 text-white flex flex-col justify-center relative z-10 pb-60">
       <h1 class="title64 mb-4">Ancreo</h1>
       <h2 class="title32 font-bold mb-4">Votre nouvelle agence web à La Rochelle</h2>
       <p class="text-lg leading-relaxed">Notre agence propose un accompagnement personalisé et adapté pour les <strong class="text-blue-300 font-extrabold">entreprises, start-up, futurs entrepreneurs</strong> et bien plus !</p>
