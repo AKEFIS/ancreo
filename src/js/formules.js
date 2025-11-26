@@ -22,7 +22,7 @@ gsap.from('.approche-card', {
 });
 
 // Service cards animation
-gsap.utils.toArray('.service-card').forEach((card, i) => {
+gsap.utils.toArray('.service-card, .optional-card, .formule-card').forEach((card, i) => {
   gsap.from(card, {
     opacity: 0,
     y: 50,
@@ -34,21 +34,6 @@ gsap.utils.toArray('.service-card').forEach((card, i) => {
       toggleActions: 'play none none none'
     },
     stagger: 0.2
-  });
-});
-
-// Optional cards animation
-gsap.utils.toArray('.optional-card').forEach((card, i) => {
-  gsap.from(card, {
-    opacity: 0,
-    y: 50,
-    duration: 0.8,
-    delay: i * 0.1,
-    scrollTrigger: {
-      trigger: card,
-      start: 'top 95%',
-      toggleActions: 'play none none none'
-    }
   });
 });
 
@@ -65,7 +50,7 @@ gsap.from('.cta-section', {
 });
 
 // Card hover effects
-document.querySelectorAll('.service-card, .optional-card').forEach(card => {
+document.querySelectorAll('.service-card, .optional-card, .formule-card').forEach(card => {
   card.addEventListener('mouseenter', () => {
     gsap.to(card, {
       y: -8,
