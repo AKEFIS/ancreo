@@ -19,3 +19,6 @@
 .text-gray { color: var(--gray); }
 .text-accentSombre { color: var(--accentuationSombre); }
 .text-accentClair { color: var(--accentuationClair); }
+
+/* Border Colors */
+.b-black { border-bottom-color: var(--lightBlack); }

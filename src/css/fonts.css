@@ -27,6 +27,11 @@
 
 /* Classes pour les Titres */
 
+.logo {
+  font-family: var(--montserrat-alternates);
+  font-size: 32px;
+}
+
 .title24 {
   font-family: var(--montserrat-alternates);
   font-weight: bold;
