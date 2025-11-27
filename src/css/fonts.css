@@ -27,6 +27,16 @@
     font-size: 32px;
   }
 
+  .text48 {
+    font-family: var(--montserrat);
+    font-size: 48px;
+  }
+
+  .logo {
+    font-family: var(--montserrat-alternates);
+    font-size: 32px;
+  }
+
   /* Classes pour les Titres */
   .title24 {
     font-family: var(--montserrat-alternates);

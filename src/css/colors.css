@@ -7,21 +7,67 @@
 }
 
 @layer utilities {
-  .bg-black { background-color: var(--black); }
-  .bg-lightBlack { background-color: var(--lightBlack); }
-  .bg-gray { background-color: var(--gray); }
-  .bg-accentuationSombre { background-color: var(--accentuationSombre); }
-  .bg-accentuationClair { background-color: var(--accentuationClair); }
+  .bg-black {
+    background-color: var(--black);
+  }
 
-  .text-black { color: var(--black); }
-  .text-lightBlack { color: var(--lightBlack); }
-  .text-gray { color: var(--gray); }
-  .text-accentuationSombre { color: var(--accentuationSombre); }
-  .text-accentuationClair { color: var(--accentuationClair); }
+  .bg-lightBlack {
+    background-color: var(--lightBlack);
+  }
 
-  .border-black { border-color: var(--black); }
-  .border-lightBlack { border-color: var(--lightBlack); }
-  .border-gray { border-color: var(--gray); }
-  .border-accentuationSombre { border-color: var(--accentuationSombre); }
-  .border-accentuationClair { border-color: var(--accentuationClair); }
+  .bg-gray {
+    background-color: var(--gray);
+  }
+
+  .bg-accentuationSombre {
+    background-color: var(--accentuationSombre);
+  }
+
+  .bg-accentuationClair {
+    background-color: var(--accentuationClair);
+  }
+
+  .text-black {
+    color: var(--black);
+  }
+
+  .text-lightBlack {
+    color: var(--lightBlack);
+  }
+
+  .text-gray {
+    color: var(--gray);
+  }
+
+  .text-accentuationSombre {
+    color: var(--accentuationSombre);
+  }
+
+  .text-accentuationClair {
+    color: var(--accentuationClair);
+  }
+
+  .border-black {
+    border-color: var(--black);
+  }
+
+  .border-lightBlack {
+    border-color: var(--lightBlack);
+  }
+
+  .border-gray {
+    border-color: var(--gray);
+  }
+
+  .border-accentuationSombre {
+    border-color: var(--accentuationSombre);
+  }
+
+  .border-accentuationClair {
+    border-color: var(--accentuationClair);
+  }
+
+  .b-black {
+    border-bottom-color: var(--lightBlack);
+  }
 }
