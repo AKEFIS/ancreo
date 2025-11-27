@@ -164,7 +164,7 @@
 
     <main class="p-4 my-4">
       <hgroup class="text-center mb-24">
-        <h1 class="title32 text-accentSombre">Contactez-nous !</h1>
+        <h1 class="title32 text-accentuationSombre">Contactez-nous !</h1>
         <h2 class="title32">Nous sommes là pour vous aider</h2>
       </hgroup>
       <form
