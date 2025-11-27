@@ -14,9 +14,9 @@
     />
   </head>
   <body class="bg-lightBlack text-gray">
-    <header>
+    <header class="sticky top-0">
       <nav
-        class="flex justify-between items-center md:px-8 pr-0 pl-4 bg-black sticky"
+        class="flex justify-between items-center md:px-8 pr-0 pl-4 bg-black z-50"
       >
         <a href="index.html" class="logo">Ancreo</a>
 
@@ -41,12 +41,13 @@
           <li
             class="relative group py-8 transition-colors duration-300 cursor-pointer hover:bg-gray-300 hover:text-black"
           >
-            <span class="p-8"> Services </span>
+            <span class="p-8"> Formules </span>
             <div
               class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4.5rem] border-l-transparent border-r-[4.5rem] border-r-transparent border-b-[1.5rem] b-black opacity-0 group-hover:opacity-100 transition-all duration-300"
             ></div>
             <ul
-              class="absolute left-0 top-full hidden group-hover:block bg-white text-black shadow-lg w-48"
+              id="submenu-desktop"
+              class="absolute left-0 top-full opacity-0 pointer-events-none bg-white text-black shadow-lg w-48"
             >
               <li class="hover:bg-gray-200 px-4 py-2">
                 <a href="#">Formule Global</a>
@@ -75,7 +76,7 @@
           </li>
         </ul>
         <!-- Menu Burger -->
-        <button id="menu-toggle" class="p-2 md:hidden">
+        <button id="menu-toggle" class="p-2 md:hidden relative z-50">
           <!-- Icon menu ouvert -->
           <svg
             id="menu-icon"
@@ -103,91 +104,61 @@
         </button>
 
         <!-- Menu Mobile -->
-        <ul
+        <div
           id="mobile-menu"
-          class="hidden bg-lightBlack absolute top-full left-0 w-full"
+          class="hidden fixed top-0 left-0 w-full h-screen z-40"
         >
-          <li>
-            <a
-              href="index.html"
-              class="block px-4 py-3 text-white border-b border-gray"
-              >Accueil</a
-            >
-          </li>
-          <li>
-            <a
-              href="#.html"
-              class="block px-4 py-3 text-white border-b border-gray"
-              >Réalisation</a
-            >
-          </li>
-          <li class="border-b border-gray">
-            <button
-              id="services-toggle"
-              class="w-full text-left px-4 py-3 flex justify-between items-center text-white"
-            >
-              <span>Services</span>
-              <svg
-                id="chevron"
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+          <ul class="overflow-y-auto h-full w-full">
+            <li class="border-b border-gray px-4 py-3">
+              <a href="index.html" class="text48 text-white">Accueil</a>
+            </li>
+            <li class="border-b border-gray px-4 py-3">
+              <a href="#.html" class="text48 text-white">Réalisation</a>
+            </li>
+            <li class="border-b border-gray py-3">
+              <button
+                id="services-toggle"
+                class="w-full text-left px-4 flex justify-between items-center text-white"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </button>
-            <ul id="submenu-mobile" class="hidden bg-black">
-              <li>
-                <a
-                  href="#"
-                  class="block px-8 py-2 text-white border-t border-gray"
-                  >Formule Global</a
+                <span class="text48">Formules</span>
+                <svg
+                  id="chevron"
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-8 py-2 text-white border-t border-gray"
-                  >Formule Premium</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-8 py-2 text-white border-t border-gray"
-                  >Formule Avancée</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-8 py-2 text-white border-t border-gray"
-                  >Formule Basique</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-8 py-2 text-white border-t border-gray"
-                  >Autre formules</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="contact.html"
-              class="block px-4 py-3 text-white border-b border-gray"
-              >Contact</a
-            >
-          </li>
-        </ul>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <ul id="submenu-mobile" class="hidden bg-black">
+                <li class="block border-b border-gray px-4 py-3">
+                  <a href="#" class="text-white text24">Formule Global</a>
+                </li>
+                <li class="border-b border-gray px-4 py-3">
+                  <a href="#" class="text-white text24">Formule Premium</a>
+                </li>
+                <li class="border-b border-gray px-4 py-3">
+                  <a href="#" class="text-white text24">Formule Avancée</a>
+                </li>
+                <li class="border-b border-gray px-4 py-3">
+                  <a href="#" class="text-white text24">Formule Basique</a>
+                </li>
+                <li class="px-4 py-3">
+                  <a href="#" class="text-white text24">Autre formules</a>
+                </li>
+              </ul>
+            </li>
+            <li class="border-b border-gray px-4 py-3">
+              <a href="contact.html" class="text48 text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -277,7 +248,7 @@
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="realisation.html">Réalisation</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="services.html">Formules</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <iframe
@@ -296,5 +267,12 @@
       </p>
     </footer>
   </body>
-  <script src="js/burger.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="js/navbarMobile.js"></script>
+  <script src="js/navbarDesktop.js"></script>
 </html>

@@ -25,6 +25,11 @@
   font-size: 32px;
 }
 
+.text48 {
+  font-family: var(--montserrat);
+  font-size: 48px;
+}
+
 /* Classes pour les Titres */
 
 .logo {
@@ -35,7 +40,7 @@
 .title24 {
   font-family: var(--montserrat-alternates);
   font-weight: bold;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .title32 {

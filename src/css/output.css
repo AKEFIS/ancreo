@@ -170,14 +170,23 @@
   }
 }
 @layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
   .absolute {
     position: absolute;
+  }
+  .fixed {
+    position: fixed;
   }
   .relative {
     position: relative;
   }
   .sticky {
     position: sticky;
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
   }
   .top-full {
     top: 100%;
@@ -190,6 +199,12 @@
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
+  }
+  .z-40 {
+    z-index: 40;
+  }
+  .z-50 {
+    z-index: 50;
   }
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
@@ -221,6 +236,12 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
+  .h-full {
+    height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
+  }
   .min-h-40 {
     min-height: calc(var(--spacing) * 40);
   }
@@ -243,9 +264,6 @@
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .rotate-180 {
-    rotate: 180deg;
-  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -267,6 +285,9 @@
   .self-center {
     align-self: center;
   }
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -276,10 +297,6 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-  .border-t {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 1px;
   }
   .border-r-\[4\.5rem\] {
     border-right-style: var(--tw-border-style);
@@ -393,13 +410,6 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
-  }
-  .group-hover\:block {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        display: block;
-      }
-    }
   }
   .group-hover\:opacity-100 {
     &:is(:where(.group):hover *) {
@@ -515,6 +525,10 @@
   font-family: var(--montserrat);
   font-size: 32px;
 }
+.text48 {
+  font-family: var(--montserrat);
+  font-size: 48px;
+}
 .logo {
   font-family: var(--montserrat-alternates);
   font-size: 32px;
@@ -522,7 +536,7 @@
 .title24 {
   font-family: var(--montserrat-alternates);
   font-weight: bold;
-  font-size: 32px;
+  font-size: 24px;
 }
 .title32 {
   font-family: var(--montserrat-alternates);
