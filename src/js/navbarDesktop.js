@@ -1,4 +1,4 @@
-// Submenu Desktop
+// Submenu desktop
 
 const submenuDesktop = document.querySelector("#submenu-desktop");
 const desktopMenuTrigger = submenuDesktop?.parentElement;
@@ -14,17 +14,19 @@ if (submenuDesktop && desktopMenuTrigger) {
   desktopHover.fromTo(
     submenuDesktop,
     { 
-      opacity: 0, 
-      y: -15, 
+      opacity: 1,
+      scaleY: 0,
+      transformOrigin: "top",
       pointerEvents: "none",
       display: "none"
     },
     {
       opacity: 1,
-      y: 0,
+      scaleY: 1,
       pointerEvents: "auto",
       display: "block",
-      duration: 0.15
+      duration: 0.15,
+      ease: "power2.out"
     }
   );
 
@@ -37,8 +39,7 @@ if (submenuDesktop && desktopMenuTrigger) {
     {
       opacity: 1,
       x: 0,
-      duration: 0.2,
-      stagger: 0.1,
+      duration: 0,
     },
   );
 
@@ -62,6 +63,6 @@ if (submenuDesktop && desktopMenuTrigger) {
   submenuDesktop.addEventListener("mouseleave", () => {
     hoverTimeout = setTimeout(() => {
       desktopHover.reverse();
-    }, 100);
+    });
   });
 }
