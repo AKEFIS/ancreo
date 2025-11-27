@@ -17,7 +17,7 @@
     rel="stylesheet" />
 </head>
 
-<body class="bg-lightBlack text-gray flex flex-col justify-between min-h-[100vh]">
+<body class="bg-lightBlack text-gray flex flex-col justify-between h-screen">
   <header class="sticky top-0">
     <nav
       class="flex justify-between items-center md:px-8 pr-0 pl-4 bg-black z-50">
@@ -172,7 +172,7 @@
           type="email"
           id="email"
           name="email"
-          placeholder="ex: example@gmail.com" />
+          placeholder="Ex: example@gmail.com" />
       </div>
 
       <div class="flex flex-col sm:w-[48%] sm:mb-8">
