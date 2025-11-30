@@ -31,6 +31,7 @@
   <!-- SCRIPTS -->
   <script type="module" src="./src/js/index/hero.js" defer></script>
   <script type="module" src="./src/js/index/index.js" defer></script>
+  <script type="module" src="./src/js/index/carousel.js" defer></script>
 
   <!-- SEO -->
   <meta name="description"
@@ -166,6 +167,250 @@
 
     </div>
 
+  </section>
+
+  <!-- NOS FORMULES -->
+  <section id="nos-formules" class="px-6 sm:px-20 py-20">
+    <div class="text-center mb-12">
+      <h2 class="title48 mb-4">Nos formules d'accompagnement personnalisé</h2>
+      <p class="text20 text-gray">Choisissez la formule la plus adaptée à votre projet</p>
+    </div>
+
+    <div class="flex justify-center">
+      <div class="relative w-full max-w-2xl flex flex-col items-center">
+
+        <!-- CAROUSEL CONTAINER -->
+        <div id="carousel-container" class="overflow-hidden">
+          <div id="carousel-track" class="flex items-center relative">
+
+            <!-- CARD 1 - GLOBALE -->
+            <div class="carousel-card bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-xl">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="title32 text-blue-400">Formule Globale</h3>
+                <span class="text-sm text-gray">1/7</span>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="text20 font-bold mb-3 text-white">Services inclus :</h4>
+                <ul class="text16 text-gray space-y-2 list-disc list-inside">
+                  <li>L'intégralité des services des formules Premium, Avancée et Basique</li>
+                  <li>Élaboration d'un business plan</li>
+                  <li>Consultations régulières avec des experts (juridiques, comptables, marketing)</li>
+                  <li>Accès à une communauté d'entrepreneur</li>
+                </ul>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="text20 font-bold mb-3 text-white">Services optionnels :</h4>
+                <ul class="text16 text-gray space-y-2 list-disc list-inside">
+                  <li>Mentorat</li>
+                  <li>Formation continue</li>
+                </ul>
+              </div>
+
+              <div class="flex justify-between items-center mt-6">
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors text16 font-semibold">
+                  En savoir plus
+                </button>
+
+              </div>
+            </div>
+
+            <!-- CARD 2 - PREMIUM -->
+            <div class="carousel-card bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-xl">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="title32 text-blue-400">Formule Premium</h3>
+                <span class="text-sm text-gray">2/7</span>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="text20 font-bold mb-3 text-white">Services inclus :</h4>
+                <ul class="text16 text-gray space-y-2 list-disc list-inside">
+                  <li>Création d'une boutique e-commerce</li>
+                  <li>Analyse des besoins et étude de marché</li>
+                  <li>Intégration des solutions de paiement (Carte Bancaire, PayPal, etc)</li>
+                  <li>Hébergement</li>
+                  <li>Nom de domaine offert pendant un 1 an</li>
+                  <li>Formation à la gestion de la boutique</li>
+                </ul>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="text20 font-bold mb-3 text-white">Services optionnels :</h4>
+                <ul class="text16 text-gray space-y-2 list-disc list-inside">
+                  <li>Conseils juridiques (RGPD, politique d'expédition et de retour, etc)</li>
+                  <li>Assistance comptable pour la gestion des ventes et des taxes</li>
+                </ul>
+              </div>
+
+              <div class="flex justify-between items-center mt-6">
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors text16 font-semibold">
+                  En savoir plus
+                </button>
+
+              </div>
+            </div>
+
+            <!-- CARD 3 - AVANCÉE -->
+            <div class="carousel-card bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-xl">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="title32 text-blue-400">Formule Avancée</h3>
+                <span class="text-sm text-gray">3/7</span>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="text20 font-bold mb-3 text-white">Services inclus :</h4>
+                <ul class="text16 text-gray space-y-2 list-disc list-inside">
+                  <li>Développement d'une application web sur mesure</li>
+                  <li>Atelier d'idéation pour définir les fonctionnalités</li>
+                  <li>Nom de domaine offert pendant 1 an</li>
+                  <li>Hébergement</li>
+                </ul>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="text20 font-bold mb-3 text-white">Services optionnels :</h4>
+                <ul class="text16 text-gray space-y-2 list-disc list-inside">
+                  <li>Support juridique pour la conformité réglementaire</li>
+                  <li>Aide à la mise en place d'un plan de marketing digital</li>
+                </ul>
+              </div>
+
+              <div class="flex justify-between items-center mt-6">
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors text16 font-semibold">
+                  En savoir plus
+                </button>
+
+              </div>
+            </div>
+
+            <!-- CARD 4 - BASIQUE -->
+            <div class="carousel-card bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-xl">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="title32 text-blue-400">Formule Basique</h3>
+                <span class="text-sm text-gray">4/7</span>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="text20 font-bold mb-3 text-white">Services inclus :</h4>
+                <ul class="text16 text-gray space-y-2 list-disc list-inside">
+                  <li>Création d'un site vitrine optimisé</li>
+                  <li>Formulaire de contact et intégration des réseaux sociaux</li>
+                  <li>Formation à la gestion du site</li>
+                  <li>Hébergement</li>
+                  <li>Nom de domaine offert pendant 1 an</li>
+                </ul>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="text20 font-bold mb-3 text-white">Services optionnels :</h4>
+                <ul class="text16 text-gray space-y-2 list-disc list-inside">
+                  <li>Maintenance technique pendant 6 mois</li>
+                  <li>Options de mise à jour du contenu</li>
+                </ul>
+              </div>
+
+              <div class="flex justify-between items-center mt-6">
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors text16 font-semibold">
+                  En savoir plus
+                </button>
+
+              </div>
+            </div>
+
+            <!-- CARD 5 - SUR MESURE -->
+            <div class="carousel-card bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-xl">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="title32 text-blue-400">Formule Sur mesure</h3>
+                <span class="text-sm text-gray">5/7</span>
+              </div>
+
+              <div class="mb-6">
+                <p class="text20 text-gray mb-4 font-semibold">Vous avez d'autres besoins ?</p>
+                <p class="text16 text-gray leading-relaxed">
+                  Prenez contact avec notre équipe et nous vous proposerons une formule sur mesure qui répond au mieux à toutes vos attentes !
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center mt-6">
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors text16 font-semibold">
+                  Nous contacter
+                </button>
+
+              </div>
+            </div>
+
+            <!-- CARD 6 - REFONTE -->
+            <div class="carousel-card bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-xl">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="title32 text-blue-400">Formule Refonte</h3>
+                <span class="text-sm text-gray">6/7</span>
+              </div>
+
+              <div class="mb-6">
+                <p class="text20 text-gray mb-4 font-semibold">Votre application se fait vieillissante ?</p>
+                <p class="text16 text-gray leading-relaxed">
+                  Contactez-nous et nous déterminerons les meilleurs choix pour votre business !
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center mt-6">
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors text16 font-semibold">
+                  Nous contacter
+                </button>
+
+              </div>
+            </div>
+
+            <!-- CARD 7 - MAINTENANCE -->
+            <div class="carousel-card bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-xl">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="title32 text-blue-400">Formule Maintenance</h3>
+                <span class="text-sm text-gray">7/7</span>
+              </div>
+
+              <div class="mb-6">
+                <p class="text20 text-gray mb-4 font-semibold">Vous avez besoin d'un suivi régulier ?</p>
+                <p class="text16 text-gray leading-relaxed">
+                  Prenez contact avec notre équipe et nous vous proposerons une formule de maintenance adaptée à vos besoins !
+                </p>
+              </div>
+
+              <div class="flex justify-between items-center mt-6">
+                <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors text16 font-semibold">
+                  Nous contacter
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- NAVIGATION BUTTONS -->
+        <button id="carousel-prev" aria-label="Précédent"
+          class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-lightBlack border border-gray text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray/20 transition-colors text-2xl">
+          <span class="mb-2">‹</span>
+        </button>
+
+        <button id="carousel-next" aria-label="Suivant"
+          class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-lightBlack border border-gray text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray/20 transition-colors text-2xl">
+          <span class="mb-2">›</span>
+        </button>
+
+        <!-- INDICATORS -->
+        <div id="carousel-indicators" class="flex justify-center gap-3 mt-8">
+          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="0"></button>
+          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="1"></button>
+          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="2"></button>
+          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="3"></button>
+          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="4"></button>
+          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="5"></button>
+          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="6"></button>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER (toujours en bas) -->

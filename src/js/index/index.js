@@ -1,3 +1,8 @@
+if (history.scrollRestoration) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 gsap.registerPlugin(ScrollTrigger);
 
 const items = document.querySelectorAll(".accordion-item");
