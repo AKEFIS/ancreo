@@ -85,7 +85,7 @@
   <!-- HERO -->
   <section class="w-full min-h-screen p-4 sm:pl-20 flex flex-col justify-center relative">
     <!-- ASCII ANCRE (à droite via ton script) -->
-    <div id="container" class="hidden lg:block absolute inset-0 overflow-hidden pointer-events-none"></div>
+    <div id="container" class="hidden md:block absolute inset-0 overflow-hidden pointer-events-none"></div>
 
     <!-- Contenu texte à gauche -->
     <div class="w-full sm:w-1/2 relative z-10">

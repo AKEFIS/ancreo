@@ -16,7 +16,11 @@ const camera = new THREE.PerspectiveCamera(60, containerWidth / containerHeight,
 // Ajuster la position selon la largeur de l'écran
 function updateCameraPosition() {
     const screenWidth = window.innerWidth;
-    if (screenWidth <= 1024) {
+    if (screenWidth <= 768) {
+        // Tablettes et petits écrans
+        camera.position.z = 12;
+        camera.position.x = -3;
+    } else if (screenWidth <= 1024) {
         // Petits laptops
         camera.position.z = 10;
         camera.position.x = -3.3;
