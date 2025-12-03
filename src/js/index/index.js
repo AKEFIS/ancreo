@@ -126,7 +126,7 @@ items.forEach((item, index) => {
       const otherIcon = otherItem.querySelector(".icon");
       if (otherItem !== item) {
         const spacing = otherIndex > currentSelectedIndex ? (maxOpenHeight - closedHeight) : 0;
-        const extra = otherIndex > currentSelectedIndex ? 6 : 0;
+        const extra = otherIndex > currentSelectedIndex ? 33 : 0;
         gsap.to(otherItem, {
           marginTop: otherIndex > 0 ? `calc(-92px + ${spacing}px + ${extra}px)` : 0,
           opacity: 0.6,
@@ -141,7 +141,7 @@ items.forEach((item, index) => {
     });
 
     // Ouvrir la card sélectionnée avec hauteur uniforme
-    item.style.zIndex = 1000;
+    item.style.zIndex = 10;
     gsap.to(item, {
       height: maxOpenHeight,
       duration: 0.55,
@@ -157,13 +157,13 @@ items.forEach((item, index) => {
   gsap.timeline({
     scrollTrigger: {
       trigger: item,
-      start: "top 90%",
+      start: "top 80%",
       once: true
     }
   }).from(item, {
     y: 60,
     opacity: 0,
-    duration: 0.5,
+    duration: 1,
     ease: "power2.out"
   });
 });
@@ -172,8 +172,8 @@ const accordion = document.getElementById('accordion');
 if (accordion) {
   ScrollTrigger.create({
     trigger: accordion,
-    start: 'bottom 85%',
-    // quand on descend et que le bloc atteint 85% => montrer toutes les cards
+    start: 'bottom 60%',
+    // quand on descend et que le bloc atteint 50% => montrer toutes les cards
     onEnter: () => {
       items.forEach((it, i) => {
         const c = it.querySelector('.accordion-content');

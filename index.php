@@ -80,24 +80,27 @@
     </script> -->
 </head>
 
-<body class="bg-black flex flex-col min-h-screen text-white">
-
-  <!-- ASCII ANCRE (à droite via ton script) -->
-  <div id="container" class="invisible sm:visible"></div>
+<body class="bg-dark-black flex flex-col min-h-screen text-white overflow-x-hidden">
 
   <!-- HERO -->
-  <section class="w-full min-h-screen sm:w-1/2 p-4 sm:pl-20 flex flex-col justify-center">
-    <h1 class="title64 mb-4">Ancreo</h1>
-    <h2 class="title32 font-bold mb-4">Votre nouvelle agence web à La Rochelle</h2>
-    <p class="text-lg leading-relaxed">
-      Notre agence propose un accompagnement personnalisé et adapté pour les
-      <strong class="text-blue-300 font-extrabold">entreprises, start-up, futurs entrepreneurs</strong>
-      et bien plus !
-    </p>
+  <section class="w-full min-h-screen p-4 sm:pl-20 flex flex-col justify-center relative">
+    <!-- ASCII ANCRE (à droite via ton script) -->
+    <div id="container" class="hidden lg:block absolute inset-0 overflow-hidden pointer-events-none"></div>
+
+    <!-- Contenu texte à gauche -->
+    <div class="w-full sm:w-1/2 relative z-10">
+      <h1 class="title64 mb-4">Ancreo</h1>
+      <h2 class="title32 font-bold mb-4">Votre nouvelle agence web à La Rochelle</h2>
+      <p class="text-lg leading-relaxed">
+        Notre agence propose un accompagnement personnalisé et adapté pour les
+        <strong class="text-blue-300 font-extrabold">entreprises, start-up, futurs entrepreneurs</strong>
+        et bien plus !
+      </p>
+    </div>
   </section>
 
   <!-- QUI SOMMES-NOUS -->
-  <section id="qui-sommes-nous" class="px-6 sm:px-20 py-20">
+  <section id="qui-sommes-nous" class="px-6 sm:px-20 py-20 bg-black">
 
     <h2 class="title48 mb-6">Qui sommes-nous ?</h2>
 
@@ -113,7 +116,7 @@
       <div class="accordion-item bg-lightBlack border border-gray rounded-xl p-6 cursor-pointer">
         <h3 class="title24 flex justify-between items-center">
           Marques & Identité
-          <span class="icon transition-transform duration-300">+</span>
+          <span class="icon transition-transform duration-300 mb-4">+</span>
         </h3>
         <div class="accordion-content overflow-hidden h-0">
           <p class="text16 mt-4 text-gray leading-relaxed">
@@ -127,7 +130,7 @@
       <div class="accordion-item bg-lightBlack border border-gray rounded-xl p-6 cursor-pointer">
         <h3 class="title24 flex justify-between items-center">
           Développement Web
-          <span class="icon transition-transform duration-300">+</span>
+          <span class="icon transition-transform duration-300 mb-4">+</span>
         </h3>
         <div class="accordion-content overflow-hidden h-0">
           <p class="text16 mt-4 text-gray leading-relaxed">
@@ -141,7 +144,7 @@
       <div class="accordion-item bg-lightBlack border border-gray rounded-xl p-6 cursor-pointer">
         <h3 class="title24 flex justify-between items-center">
           E-Commerce
-          <span class="icon transition-transform duration-300">+</span>
+          <span class="icon transition-transform duration-300 mb-4">+</span>
         </h3>
         <div class="accordion-content overflow-hidden h-0">
           <p class="text16 mt-4 text-gray leading-relaxed">
@@ -155,7 +158,7 @@
       <div class="accordion-item bg-lightBlack border border-gray rounded-xl p-6 cursor-pointer">
         <h3 class="title24 flex justify-between items-center">
           Accompagnement
-          <span class="icon transition-transform duration-300">+</span>
+          <span class="icon transition-transform duration-300 mb-4">+</span>
         </h3>
         <div class="accordion-content overflow-hidden h-0">
           <p class="text16 mt-4 text-gray leading-relaxed">
@@ -170,7 +173,7 @@
   </section>
 
   <!-- NOS FORMULES -->
-  <section id="nos-formules" class="px-6 sm:px-20 py-20">
+  <section id="nos-formules" class="px-6 sm:px-20 py-20 bg-black">
     <div class="text-center mb-12">
       <h2 class="title48 mb-4">Nos formules d'accompagnement personnalisé</h2>
       <p class="text20 text-gray">Choisissez la formule la plus adaptée à votre projet</p>
@@ -414,7 +417,7 @@
   </section>
 
   <!-- FOOTER (toujours en bas) -->
-  <footer class="mt-auto text-center pb-8">
+  <footer class="mt-auto text-center pb-8 bg-black">
     <h2>Site en cours de construction - Ancreo</h2>
     <h4 class="text-blue-600"><a href="mailto:ancreo17@gmail.com">ancreo17@gmail.com</a></h4>
   </footer>
