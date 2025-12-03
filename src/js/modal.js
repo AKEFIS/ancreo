@@ -26,47 +26,48 @@ const projects = {
     },
     projet5: {
         image: "assets/quizListGrand.png",
-        title: "Première Version",
+        title: "QuizList",
         tags: ["Figma"],
         class: "object-fill",
         text: "Projet réalisé dans le cadre du cours de Figma, c'est une application de quiz."
     },
     projet6: {
         image: "assets/PodlyGrand.png",
-        title: "Première Version",
+        title: "Podly",
         tags: ["Figma"],
         class: "object-fill",
         text: "Projet réalisé dans le cadre du cours de Figma, elle sert à écouter des podcasts."
     },
     projet7: {
         image: "assets/biblio.png",
-        title: "Première Version",
+        title: "Projet Bibliotheque",
         tags: ["Symfony", "Twig", "Faker"],
         class: "bg-top object-cover",
         text: "Projet réalisé en 2024, a pour but de reproduire un système numérique d'une vraie bibliothèque."
     },
     projet8: {
         image: "assets/AtlasGrand.png",
-        title: "Première Version",
+        title: "Atlas",
         tags: ["Figma"],
         class: "bg-top object-cover",
         text: "Projet réalisé dans le cadre du cours de Figma, c'est une application guide touristique dans n'importe quelle ville sélectionnée."
     },
     projet9: {
         image: "assets/MagicGrand.png",
-        title: "Première Version",
+        title: "Magic",
         tags: ["Figma"],
         class: "bg-top object-cover",
         text: "Projet réalisé dans le cadre du cours de Figma, elle sert a suivre les matchs de magic et regarder les scores en direct."
     },
     projet10: {
         image: "assets/BgCollectGrand.png",
-        title: "Première Version",
+        title: "BGCollect",
         tags: ["Figma"],
         class: "bg-top object-cover",
         text: "Projet réalisé dans le cadre du cours de Figma, cette application a pour but de permettre aux gens de renseigner leur collection de jeux de société et de se tenir au courant des avis et des dernières sorties."
     },
 };
+
 function openModal(key, cardElement) {
     const proj = projects[key];
     if (!proj) return;
@@ -75,9 +76,7 @@ function openModal(key, cardElement) {
     const modalContent = document.querySelector(".modal-content");
     const modalImage = document.querySelector(".modal-image");
 
-    // RESET CLASSES BEFORE APPLYING NEW ONES
     modalImage.className = "modal-image w-full max-h-[40vh] rounded-b-xl mb-4";
-
     modalImage.src = proj.image;
 
     if (proj.class) {
@@ -98,12 +97,8 @@ function openModal(key, cardElement) {
 
     document.querySelector(".modal-text").textContent = proj.text;
 
-    // ---- ANIMATION GSAP ---- //
-
-    // On montre la modale
     modal.classList.remove("hidden");
 
-    // Position de départ = card cliquée
     const rect = cardElement.getBoundingClientRect();
 
     gsap.set(modalContent, {
@@ -113,7 +108,6 @@ function openModal(key, cardElement) {
         y: rect.top + rect.height / 2 - window.innerHeight / 2
     });
 
-    // Animation d'ouverture
     gsap.to(modalContent, {
         duration: 0.8,
         opacity: 1,
@@ -136,3 +130,57 @@ document.querySelector(".modal-close").addEventListener("click", () => {
         onComplete: () => modal.classList.add("hidden")
     });
 });
+
+document.querySelector(".modal-close").addEventListener("click", () => {
+    const modal = document.querySelector(".modal");
+    const modalContent = document.querySelector(".modal-content");
+
+    gsap.to(modalContent, {
+        duration: 0.3,
+        opacity: 0,
+        scale: 0.7,
+        ease: "power3.in",
+        onComplete: () => modal.classList.add("hidden")
+    });
+});
+
+const track = document.querySelector(".carouselTrack");
+const slides = document.querySelectorAll(".carousel-slide");
+
+function updateActiveSlide() {
+    const center = window.innerWidth / 2;
+
+    // On cherche la slide la plus proche du centre de l'écran
+    // On initialise la closestDist à Infinity pour que la première distance calculée soit forcément plus petite
+    let closest = null;
+    let closestDist = Infinity; 
+
+    slides.forEach(slide => {
+        const rect = slide.getBoundingClientRect();
+        const slideCenter = rect.left + rect.width / 2;
+        const dist = Math.abs(slideCenter - center);
+
+        if (dist < closestDist) {
+            closestDist = dist;
+            closest = slide;
+        }
+    });
+
+    // On met à jour les classes des slides
+    slides.forEach(slide => {
+        slide.classList.remove("scale-[1.10]", "opacity-100", "blur-none");
+        slide.classList.add("scale-[0.85]", "opacity-50", "blur-sm", "filter", "grayscale");
+    });
+
+    // On agrandit la slide la plus proche du centre
+    if (closest) {
+        closest.classList.add("scale-[1.10]", "opacity-100", "blur-none");
+        closest.classList.remove("scale-[0.85]", "opacity-50", "blur-sm", "filter", "grayscale");
+    }
+}
+
+track.addEventListener("scroll", () => {
+    requestAnimationFrame(updateActiveSlide);
+});
+
+window.addEventListener("load", updateActiveSlide);
