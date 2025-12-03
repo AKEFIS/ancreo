@@ -390,26 +390,33 @@
           </div>
         </div>
 
-        <!-- NAVIGATION BUTTONS -->
-        <button id="carousel-prev" aria-label="Précédent"
-          class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-lightBlack border border-gray text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray/20 transition-colors text-2xl">
-          <span class="mb-2">‹</span>
-        </button>
+        <div class="flex justify-around items-center w-full">
+          <!-- BTN PREV (mobile) -->
+          <button id="carousel-prev" aria-label="Précédent"
+            class="md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 
+           bg-lightBlack border border-gray text-white rounded-full w-10 h-10 
+           flex items-center justify-center shadow-lg hover:bg-gray/20 transition-colors text-xl">
+            <span class="mb-1">›</span>
+          </button>
 
-        <button id="carousel-next" aria-label="Suivant"
-          class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-lightBlack border border-gray text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray/20 transition-colors text-2xl">
-          <span class="mb-2">›</span>
-        </button>
+          <!-- INDICATORS -->
+          <div id="carousel-indicators" class="flex justify-center items-center gap-3">
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="0"></button>
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="1"></button>
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="2"></button>
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="3"></button>
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="4"></button>
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="5"></button>
+            <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="6"></button>
+          </div>
 
-        <!-- INDICATORS -->
-        <div id="carousel-indicators" class="flex justify-center gap-3 mt-8">
-          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="0"></button>
-          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="1"></button>
-          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="2"></button>
-          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="3"></button>
-          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="4"></button>
-          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="5"></button>
-          <button class="carousel-indicator w-3 h-3 rounded-full bg-gray/40 transition-all" data-index="6"></button>
+          <!-- BTN NEXT (mobile) -->
+          <button id="carousel-next" aria-label="Suivant"
+            class="md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 
+           bg-lightBlack border border-gray text-white rounded-full w-10 h-10 
+           flex items-center justify-center shadow-lg hover:bg-gray/20 transition-colors text-xl">
+            <span class="mb-1">›</span>
+          </button>
         </div>
 
       </div>
