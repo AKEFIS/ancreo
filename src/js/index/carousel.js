@@ -15,6 +15,8 @@ let cardWidth = 0;
 // Variables pour le Swipe
 let startX = 0;
 let isDragging = false;
+// NOUVEAU : Variable pour empêcher le clic si on est en train de swiper
+let isClickBlocked = false;
 
 function init() {
   if (!container || cards.length === 0) return;
@@ -32,6 +34,19 @@ function init() {
       trigger: container,
       start: "top 80%"
     }
+  });
+
+  // --- NOUVEAU : RENDRE LES CARTES CLIQUABLES ---
+  cards.forEach((card, index) => {
+    card.addEventListener('click', () => {
+      // 1. Si on a détecté un swipe juste avant, on ignore le clic
+      if (isClickBlocked) return;
+
+      // 2. Si on clique sur une carte qui n'est pas celle du centre, on y va
+      if (currentIndex !== index) {
+        goTo(index);
+      }
+    });
   });
 
   window.addEventListener('resize', () => {
@@ -165,6 +180,10 @@ function endDrag(e) {
 
   // Si on a glissé de plus de 50px
   if (Math.abs(diff) > 50) {
+    // --- CORRECTION ICI : On bloque le clic temporairement ---
+    isClickBlocked = true;
+    setTimeout(() => { isClickBlocked = false; }, 50); // On débloque après 50ms
+
     if (diff > 0) {
       // Glissement vers la gauche -> Suivant
       goTo(currentIndex + 1);
