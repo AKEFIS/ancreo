@@ -340,11 +340,11 @@
         <div class="flex gap-4">
           <button id="carousel-prev" aria-label="Précédent"
             class="bg-lightBlack border border-gray text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-blue-500 hover:border-blue-500 transition-all active:scale-95">
-            ‹
+            <span class="mb-1">‹</span>
           </button>
           <button id="carousel-next" aria-label="Suivant"
             class="bg-lightBlack border border-gray text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-blue-500 hover:border-blue-500 transition-all active:scale-95">
-            ›
+            <span class="mb-1">›</span>
           </button>
         </div>
 
