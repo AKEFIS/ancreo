@@ -7,246 +7,291 @@ gsap.registerPlugin(ScrollTrigger);
 
 const items = document.querySelectorAll(".accordion-item");
 const defaultOpen = true;
+
+// --- RÉGLAGES ---
+const desktopOverlap = 92;  // Superposition sur PC (négatif)
+const mobileGap = 30;       // Espace sur Téléphone/Tablette (positif)
+
+// ICI : On augmente la limite pour inclure les tablettes (iPad Pro, etc.)
+const mobileBreakpoint = 1025;
+
+// Variables d'état
 let currentSelectedItem = null;
 let currentSelectedIndex = null;
-
-// nouveau drapeau : true quand le bloc est en mode "tout montré"
 let isAccordionExpanded = false;
-
-// rotation de base : afficher un PLUS (0deg)
 const baseRotation = 0;
 
-// Calculer la hauteur maximale de toutes les cards
 let maxOpenHeight = 0;
 
+// --- 1. CALCUL DES HAUTEURS ---
+function calculateHeights() {
+  maxOpenHeight = 0;
+
+  items.forEach((item) => {
+    const content = item.querySelector(".accordion-content");
+    const header = item.querySelector("h3");
+
+    const prevHeight = item.style.height;
+    item.style.height = 'auto';
+    content.style.height = 'auto';
+
+    const itemStyle = getComputedStyle(item);
+    const paddingTop = parseFloat(itemStyle.paddingTop) || 0;
+    const paddingBottom = parseFloat(itemStyle.paddingBottom) || 0;
+    const closedHeight = header.offsetHeight + paddingTop + paddingBottom;
+    const contentHeight = content.scrollHeight;
+    const openHeight = closedHeight + contentHeight;
+
+    if (openHeight > maxOpenHeight) {
+      maxOpenHeight = openHeight;
+    }
+
+    item.dataset.closedHeight = closedHeight;
+    item.style.height = prevHeight;
+  });
+}
+
+// --- 2. FONCTION CENTRALE DE MISE EN PAGE ---
+function updatePositions() {
+  const isMobileOrTablet = window.innerWidth < mobileBreakpoint;
+
+  items.forEach((item, index) => {
+
+    // --- MODE MOBILE & TABLETTE (LISTE SIMPLE) ---
+    if (isMobileOrTablet) {
+      // Marge positive pour bien séparer les cartes
+      const targetMargin = index > 0 ? mobileGap : 0;
+      gsap.to(item, { marginTop: targetMargin, duration: 0.5 });
+      return; // On s'arrête là
+    }
+
+    // --- MODE ORDINATEUR (DECK OF CARDS) ---
+    const closedHeight = parseFloat(item.dataset.closedHeight);
+    let targetMargin = 0;
+
+    if (index > 0) {
+      // 1. Base : Tout le monde est empilé à -92px
+      targetMargin = -desktopOverlap;
+
+      // 2. Si une carte est sélectionnée
+      if (currentSelectedIndex !== null) {
+        // Si la carte est APRÈS la sélectionnée, elle descend
+        if (index > currentSelectedIndex) {
+          const spacing = maxOpenHeight - closedHeight;
+          const extra = 33;
+          targetMargin = -desktopOverlap + spacing + extra;
+        }
+        // Les cartes AVANT ou la carte ACTIVE restent à -92px
+      }
+    }
+
+    // Mode "Tout ouvert" (ScrollTrigger bas)
+    if (isAccordionExpanded) {
+      targetMargin = 0;
+    }
+
+    gsap.to(item, { marginTop: targetMargin, duration: 0.5, ease: "power2.out" });
+  });
+}
+
+calculateHeights();
+
+// --- 3. INITIALISATION DES ITEMS ---
 items.forEach((item, index) => {
   const content = item.querySelector(".accordion-content");
-  const header = item.querySelector("h3");
+  const icon = item.querySelector(".icon");
+  const isMobileOrTablet = window.innerWidth < mobileBreakpoint;
+
+  gsap.set(item, { opacity: 0 });
 
   item.style.overflow = "hidden";
   content.style.overflow = "hidden";
   content.classList.remove("h-0");
 
-  const itemStyle = getComputedStyle(item);
-  const paddingTop = parseFloat(itemStyle.paddingTop) || 0;
-  const paddingBottom = parseFloat(itemStyle.paddingBottom) || 0;
-  const closedHeight = header.offsetHeight + paddingTop + paddingBottom;
-
-  const contentHeight = content.scrollHeight;
-  const openHeight = closedHeight + contentHeight;
-
-  // Trouver la hauteur maximale
-  if (openHeight > maxOpenHeight) {
-    maxOpenHeight = openHeight;
-  }
-});
-
-// Maintenant appliquer avec la hauteur uniforme
-items.forEach((item, index) => {
-  const content = item.querySelector(".accordion-content");
-  const icon = item.querySelector(".icon");
-  const header = item.querySelector("h3");
-
-  const itemStyle = getComputedStyle(item);
-  const paddingTop = parseFloat(itemStyle.paddingTop) || 0;
-  const paddingBottom = parseFloat(itemStyle.paddingBottom) || 0;
-  const closedHeight = header.offsetHeight + paddingTop + paddingBottom;
-
-  const contentHeight = content.scrollHeight;
-
-  // Superposition modérée
+  // Initialisation des marges
   if (index > 0) {
-    item.style.marginTop = "-92px";
+    item.style.marginTop = isMobileOrTablet ? `${mobileGap}px` : `-${desktopOverlap}px`;
   }
 
-  // état initial des hauteurs et icônes
-  if (defaultOpen) {
-    gsap.set(item, { height: maxOpenHeight });
-    gsap.set(content, { height: contentHeight });
-  } else {
-    gsap.set(item, { height: closedHeight });
-    gsap.set(content, { height: 0 });
-  }
-  // icône = PLUS par défaut
+  // Hauteur MAX tout le temps
+  gsap.set(item, { height: maxOpenHeight });
+  gsap.set(content, { height: content.scrollHeight });
   gsap.set(icon, { rotate: baseRotation });
 
+  // --- 4. GESTION DU CLIC ---
   item.addEventListener("click", () => {
-    // Si l'accordéon est en mode "tout montré", ignorer les clics
+    // SUR MOBILE ET TABLETTE : On ne fait RIEN.
+    if (window.innerWidth < mobileBreakpoint) return;
+
     if (isAccordionExpanded) return;
+    if (!item.classList.contains('revealed')) return;
 
-    const curContentHeight = content.scrollHeight;
-
-    // Si on clique sur la même card, la désélectionner -> tout revenir à la position de base
+    // --- CAS A : DÉSÉLECTION (Clic sur la même carte) ---
     if (currentSelectedItem === item) {
-      items.forEach((otherItem, otherIndex) => {
-        const otherIcon = otherItem.querySelector(".icon");
-        gsap.to(otherItem, {
-          marginTop: otherIndex > 0 ? "-92px" : 0,
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.out"
-        });
-        gsap.to(otherIcon, { rotate: baseRotation, duration: 0 });
+      gsap.to(icon, { rotate: baseRotation, duration: 0.2 });
+
+      // Reset total
+      items.forEach(other => {
+        const otherContent = other.querySelector(".accordion-content");
+        if (other.classList.contains('revealed')) {
+          gsap.to(other, { opacity: 1, duration: 0.4 });
+        }
+        // Texte visible
+        gsap.to(otherContent, { opacity: 1, duration: 0.4 });
       });
+
       currentSelectedItem = null;
       currentSelectedIndex = null;
+      updatePositions();
       return;
     }
 
-    // --- rotation immédiate de l'icône cliquée ---
-    gsap.killTweensOf(icon);
-    gsap.to(icon, { rotate: "+=90deg", duration: 0.1, ease: "power2.out" });
-    // -----------------------------------------------
+    // --- CAS B : SÉLECTION (Nouvelle carte) ---
+    const clickedIndex = index;
 
-    // Réinitialiser l'opacity et les icônes des AUTRES items (exclut l'item cliqué)
-    items.forEach((otherItem) => {
-      if (otherItem !== item) {
-        const otherIcon = otherItem.querySelector(".icon");
-        gsap.to(otherItem, { opacity: 1, duration: 0.2 });
-        // Revenir à la position de base SEULEMENT si ce n'est pas la card sélectionnée
+    items.forEach((other, otherIndex) => {
+      const otherContent = other.querySelector(".accordion-content");
+      const otherIcon = other.querySelector(".icon");
+
+      // 1. Icônes
+      if (other === item) {
+        gsap.to(otherIcon, { rotate: baseRotation + 90, duration: 0.2 });
+      } else {
         gsap.to(otherIcon, { rotate: baseRotation, duration: 0.2 });
       }
+
+      // 2. Opacité Carte
+      let cardOpacity = 0;
+      if (other === item) {
+        cardOpacity = 1;
+      } else if (other.classList.contains('revealed')) {
+        cardOpacity = 0.6;
+      }
+      gsap.to(other, { opacity: cardOpacity, duration: 0.5 });
+
+      // 3. Opacité Texte
+      // AVANT = Caché / PENDANT et APRÈS = Visible
+      let textOpacity = 1;
+      if (otherIndex < clickedIndex) {
+        textOpacity = 0;
+      } else {
+        textOpacity = 1;
+      }
+      gsap.to(otherContent, { opacity: textOpacity, duration: 0.4 });
     });
 
-    // Réinitialiser TOUTES les positions avant de sélectionner la nouvelle
-    items.forEach((otherItem, otherIndex) => {
-      gsap.to(otherItem, {
-        marginTop: otherIndex > 0 ? "-92px" : 0,
-        duration: 0.3,
-        ease: "power2.out"
-      });
-    });
-
-    // Sélectionner la nouvelle card
     currentSelectedItem = item;
     currentSelectedIndex = index;
 
-    // Écarter UNIQUEMENT les cards APRÈS la sélectionnée
-    items.forEach((otherItem, otherIndex) => {
-      const otherIcon = otherItem.querySelector(".icon");
-      if (otherItem !== item) {
-        const spacing = otherIndex > currentSelectedIndex ? (maxOpenHeight - closedHeight) : 0;
-        const extra = otherIndex > currentSelectedIndex ? 33 : 0;
-        gsap.to(otherItem, {
-          marginTop: otherIndex > 0 ? `calc(-92px + ${spacing}px + ${extra}px)` : 0,
-          opacity: 0.6,
-          duration: 0.5,
-          ease: "power2.out"
-        });
-        // Revenir à la position de base
-        gsap.to(otherIcon, { rotate: baseRotation, duration: 0 });
-      } else {
-        gsap.to(otherItem, { opacity: 1, duration: 0.5, ease: "power2.out" });
-      }
-    });
+    updatePositions();
 
-    // Ouvrir la card sélectionnée avec hauteur uniforme
     item.style.zIndex = 10;
-    gsap.to(item, {
-      height: maxOpenHeight,
-      duration: 0.55,
-      ease: "power2.out",
-      onComplete: () => {
-        item.style.zIndex = "";
-        ScrollTrigger.refresh();
-      }
-    });
-    gsap.to(content, { height: curContentHeight, duration: 0.5, ease: "power2.out" });
+    setTimeout(() => { item.style.zIndex = ""; }, 500);
+
+    ScrollTrigger.refresh();
   });
 
-  gsap.timeline({
+  // --- SCROLL TRIGGER (Apparition initiale) ---
+  const tl = gsap.timeline({
     scrollTrigger: {
       trigger: item,
       start: "top 80%",
-      once: true
+      once: true,
     }
-  }).from(item, {
-    y: 60,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
   });
+
+  tl.from(item, { y: 60, duration: 1, ease: "power2.out" }, 0);
+
+  tl.add(() => {
+    const isMobileNow = window.innerWidth < mobileBreakpoint;
+
+    // Sur mobile/tablette, on affiche tout direct
+    let targetOpacity = 1;
+    if (!isMobileNow) {
+      const isDimmed = currentSelectedItem && currentSelectedItem !== item;
+      targetOpacity = isDimmed ? 0.6 : 1;
+    }
+
+    gsap.to(item, {
+      opacity: targetOpacity,
+      duration: 1,
+      ease: "power2.out",
+      onComplete: () => {
+        item.classList.add('revealed');
+
+        // Logique Desktop uniquement
+        if (!isMobileNow && currentSelectedItem && currentSelectedItem !== item) {
+          // Carte "après" qui apparait -> Texte visible
+          gsap.to(item, { opacity: 0.6, duration: 0.2, overwrite: true });
+          gsap.to(content, { opacity: 1, duration: 0.2, overwrite: true });
+        }
+      }
+    });
+  }, 0);
 });
 
+// --- SCROLL TRIGGER GLOBAL ---
 const accordion = document.getElementById('accordion');
 if (accordion) {
   ScrollTrigger.create({
     trigger: accordion,
-    start: 'bottom 60%',
-    // quand on descend et que le bloc atteint 50% => montrer toutes les cards
+    start: 'bottom 50%',
     onEnter: () => {
-      items.forEach((it, i) => {
-        const c = it.querySelector('.accordion-content');
-        const ic = it.querySelector('.icon');
+      // Uniquement utile sur Desktop
+      if (window.innerWidth >= mobileBreakpoint) {
+        isAccordionExpanded = true;
+        items.forEach((it) => {
+          it.classList.add('revealed');
+          const ic = it.querySelector('.icon');
+          const c = it.querySelector('.accordion-content');
 
-        // mesurer le contenu actuel
-        const contentH = c.scrollHeight;
+          gsap.to(it, { opacity: 1, duration: 0.45, ease: 'power2.out' });
+          gsap.to(c, { opacity: 1, duration: 0.45 });
+          gsap.to(ic, { rotate: baseRotation + 90, duration: 0.35, ease: 'power2.out' });
 
-        // afficher complètement chaque card (hauteur uniforme)
-        gsap.to(it, { height: maxOpenHeight, duration: 0.45, ease: 'power2.out' });
-        gsap.to(c, { height: contentH, duration: 0.45, ease: 'power2.out' });
-
-        // annuler la superposition pour voir toutes les cards (aligner)
-        gsap.to(it, { marginTop: i > 0 ? '0px' : '0px', duration: 0.45, ease: 'power2.out' });
-
-        // icône en "croix"
-        gsap.to(ic, { rotate: baseRotation + 90, duration: 0.35, ease: 'power2.out' });
-
-        // s'assurer visibilité
-        gsap.to(it, { opacity: 1, duration: 0.25 });
-      });
-
-      // Bloquer les clics pendant l'état "tout montré"
-      isAccordionExpanded = true;
-      items.forEach(it => it.classList.add('pointer-events-none'));
-
-      // marquer qu'aucune card n'est individuellement sélectionnée
-      currentSelectedItem = null;
-      currentSelectedIndex = null;
+          it.classList.add('pointer-events-none');
+        });
+        updatePositions();
+        currentSelectedItem = null;
+        currentSelectedIndex = null;
+      }
     },
-
-    // quand on remonte au-dessus (leaveBack) => restaurer l'état normal
     onLeaveBack: () => {
-      items.forEach((it, i) => {
-        const c = it.querySelector('.accordion-content');
-        const ic = it.querySelector('.icon');
-        const header = it.querySelector('h3');
+      if (window.innerWidth >= mobileBreakpoint) {
+        isAccordionExpanded = false;
+        items.forEach((it) => {
+          const ic = it.querySelector('.icon');
+          const c = it.querySelector('.accordion-content');
 
-        const style = getComputedStyle(it);
-        const padTop = parseFloat(style.paddingTop) || 0;
-        const padBottom = parseFloat(style.paddingBottom) || 0;
-        const closedH = header.offsetHeight + padTop + padBottom;
+          it.classList.remove('pointer-events-none');
 
-        // restaurer superposition et hauteur selon defaultOpen
-        gsap.to(it, {
-          height: defaultOpen ? maxOpenHeight : closedH,
-          duration: 0.35,
-          ease: 'power2.out'
+          gsap.to(it, { opacity: 1, duration: 0.35, ease: 'power2.out' });
+          gsap.to(c, { opacity: 1, duration: 0.35 });
+
+          gsap.to(ic, { rotate: baseRotation, duration: 0.3, ease: 'power2.out' });
         });
-        gsap.to(c, {
-          height: defaultOpen ? c.scrollHeight : 0,
-          duration: 0.35,
-          ease: 'power2.out'
-        });
-
-        gsap.to(it, {
-          marginTop: i > 0 ? '-92px' : 0,
-          duration: 0.35,
-          ease: 'power2.out'
-        });
-
-        // icône revient en "plus"
-        gsap.to(ic, { rotate: baseRotation, duration: 0.3, ease: 'power2.out' });
-
-        gsap.to(it, { opacity: 1, duration: 0.2 });
-      });
-
-      // réautoriser les clics
-      isAccordionExpanded = false;
-      items.forEach(it => it.classList.remove('pointer-events-none'));
-
-      currentSelectedItem = null;
-      currentSelectedIndex = null;
+        updatePositions();
+      }
     }
   });
 }
+
+// --- RESIZE ---
+let resizeTimeout;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    calculateHeights();
+    items.forEach(item => {
+      gsap.set(item, { height: maxOpenHeight });
+
+      // Reset si passage en mode mobile/tablette
+      if (window.innerWidth < mobileBreakpoint) {
+        gsap.set(item, { opacity: 1 });
+        const c = item.querySelector('.accordion-content');
+        gsap.set(c, { opacity: 1 });
+      }
+    });
+    updatePositions();
+  }, 100);
+});
