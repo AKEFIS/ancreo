@@ -1,5 +1,6 @@
 :root {
   --black: #1a1a1a;
+  --dark-black: #000000;
   --lightBlack: #2b2b2b;
   --gray: #d0d0d0;
   --accentuationSombre: #6ed6e0;
@@ -9,6 +10,10 @@
 @layer utilities {
   .bg-black {
     background-color: var(--black);
+  }
+
+  .bg-dark-black {
+    background-color: var(--dark-black);
   }
 
   .bg-lightBlack {
