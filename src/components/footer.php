@@ -35,7 +35,7 @@
   integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
   crossorigin="anonymous"
   referrerpolicy="no-referrer"></script>
-<script src="js/navbarMobile.js"></script>
-<script src="js/navbarDesktop.js"></script>
+<script src="/src/js/navbarMobile.js"></script>
+<script src="/src/js/navbarDesktop.js"></script>
 
 </html>
