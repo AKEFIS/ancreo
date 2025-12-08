@@ -28,6 +28,46 @@
   <script type="module" src="./src/js/index/carousel.js" defer></script>
 
   <meta name="description" content="Ancreo, agence web spécialisée dans l’accompagnement des auto-entrepreneurs : démarches, business plan, conseils, création de sites web et web apps.">
+
+  <!-- <script type="application/ld+json">
+    [{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ancreo",
+        "url": "https://agence-ancreo.lpmiaw.univ-lr.fr"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Accompagnement auto-entrepreneur",
+        "provider": {
+          "@type": "Organization",
+          "name": "Ancreo"
+        },
+        "description": "Accompagnement complet des auto-entrepreneurs : démarches, business plan et conseils juridiques et comptables."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Création de sites web",
+        "provider": {
+          "@type": "Organization",
+          "name": "Ancreo"
+        },
+        "description": "Création de sites vitrines et web apps sur mesure pour entreprises et auto-entrepreneurs."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Refonte de sites web",
+        "provider": {
+          "@type": "Organization",
+          "name": "Ancreo"
+        },
+        "description": "Refonte complète de sites web pour moderniser votre présence en ligne et améliorer l’expérience utilisateur."
+      }
+    ]
+  </script> -->
 </head>
 
 <body class="bg-dark-black flex flex-col min-h-screen text-white overflow-x-hidden">
