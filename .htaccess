@@ -9,14 +9,15 @@ RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^/]+)$ $1.html [L]
 
 # Réécriture des URL
-RewriteRule ^ src/index.php [L]
-RewriteRule ^/realisation$ src/realisation.php [L]
-RewriteRule ^/contact$ src/contact.php [L]
+RewriteRule ^realisation$ src/realisation.php [L]
+RewriteRule ^contact$ src/contact.php [L]
 
-RewriteRule ^/formule-avancee$ src/formules/formule-avancee.php [L]
-RewriteRule ^/formule-basique$ src/formules/formule-basique.php [L]
-RewriteRule ^/formule-globale$ src/formules/formule-globale.php [L]
-RewriteRule ^/formule-premium$ src/formules/formule-premium.php [L]
-RewriteRule ^/formule-autres$ src/formules/formule-autres.php [L]
+RewriteRule ^formule-avancee$ src/formules/formule-avancee.php [L]
+RewriteRule ^formule-basique$ src/formules/formule-basique.php [L]
+RewriteRule ^formule-globale$ src/formules/formule-globale.php [L]
+RewriteRule ^formule-premium$ src/formules/formule-premium.php [L]
+RewriteRule ^formule-autres$ src/formules/formule-autres.php [L]
+
+RewriteRule ^$ src/index.php [L]
 
 ErrorDocument 404 /src/404.php
