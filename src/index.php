@@ -1,84 +1,20 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ancreo</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="./src/css/output.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100..900&family=Montserrat:wght@100..900&display=swap"
-    rel="stylesheet" />
-
-  <!-- THREE.JS -->
-  <script type="importmap">
+<?php include 'components/header.php'; ?>
+<title>Accueil</title>
+<!-- THREE.JS -->
+<script type="importmap">
     {
-      "imports": {
+    "imports": {
         "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
         "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
-      }
     }
-  </script>
+    }
+</script>
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-  <!-- SCRIPTS -->
-  <script type="module" src="./src/js/index/hero.js" defer></script>
-  <script type="module" src="./src/js/index/index.js" defer></script>
-  <script type="module" src="./src/js/index/carousel.js" defer></script>
-
-  <!-- SEO -->
-  <meta name="description"
-    content="Ancreo, agence web spécialisée dans l’accompagnement des auto-entrepreneurs : démarches, business plan, conseils, création de sites web et web apps.">
-
-  <!-- Ajuster les infos   -->
-  <!-- <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Ancreo",
-        "url": "https://agence-ancreo.lpmiaw.univ-lr.fr"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Accompagnement auto-entrepreneur",
-        "provider": {
-          "@type": "Organization",
-          "name": "Ancreo"
-        },
-        "description": "Accompagnement complet des auto-entrepreneurs : démarches, business plan et conseils juridiques et comptables."
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Création de sites web",
-        "provider": {
-          "@type": "Organization",
-          "name": "Ancreo"
-        },
-        "description": "Création de sites vitrines et web apps sur mesure pour entreprises et auto-entrepreneurs."
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Refonte de sites web",
-        "provider": {
-          "@type": "Organization",
-          "name": "Ancreo"
-        },
-        "description": "Refonte complète de sites web pour moderniser votre présence en ligne et améliorer l’expérience utilisateur."
-      }
-    ]
-    </script> -->
-</head>
+<!-- SCRIPTS -->
+<script type="module" src="./js/index/hero.js" defer></script>
+<script type="module" src="./js/index/index.js" defer></script>
+<script type="module" src="./js/index/carousel.js" defer></script>
+<?php include 'components/navbar.php'; ?>
 
 <body class="bg-dark-black flex flex-col min-h-screen text-white overflow-x-hidden">
 
@@ -361,14 +297,4 @@
 
     </div>
   </section>
-
-  <!-- FOOTER (toujours en bas) -->
-  <footer class="mt-auto text-center pb-8 bg-black">
-    <h2>Site en cours de construction - Ancreo</h2>
-    <h4 class="text-blue-600"><a href="mailto:ancreo17@gmail.com">ancreo17@gmail.com</a></h4>
-  </footer>
-
-</body>
-
-
-</html>
+  <?php include 'components/footer.php'; ?>

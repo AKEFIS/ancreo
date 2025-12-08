@@ -7,3 +7,14 @@ RewriteCond %{REQUEST_FILENAME}.html -f
 
 # Sert a reecrire l'url -> ancreo/page.html devient ancreo/page
 RewriteRule ^([^/]+)$ $1.html [L]
+
+# Réécriture des URL
+RewriteRule ^ src/index.php [L]
+RewriteRule ^/realisation$ src/realisation.php [L]
+RewriteRule ^/contact$ src/contact.php [L]
+
+RewriteRule ^/formule-avancee$ src/formules/formule-avancee.php [L]
+RewriteRule ^/formule-basique$ src/formules/formule-basique.php [L]
+RewriteRule ^/formule-globale$ src/formules/formule-globale.php [L]
+RewriteRule ^/formule-premium$ src/formules/formule-premium.php [L]
+RewriteRule ^/formule-autres$ src/formules/formule-autres.php [L]
