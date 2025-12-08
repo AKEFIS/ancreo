@@ -235,7 +235,7 @@
             </button>
           </div>
 
-          <div class="carousel-card w-[85vw] sm:w-[400px] flex-shrink-0 bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-2xl cursor-pointer flex flex-col justify-between">
+          <div class="carousel-card w-[85vw] sm:w-[400px] flex-shrink-0 bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-2xl cursor-pointer flex flex-col">
             <div class="flex justify-between items-start mb-4">
               <h3 class="title32 text-blue-400">Formule Refonte</h3>
               <span class="text-sm text-gray">6/7</span>
