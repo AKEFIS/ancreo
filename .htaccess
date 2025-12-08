@@ -9,7 +9,7 @@ RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^/]+)$ $1.html [L]
 
 # Réécriture des URL
-RewriteRule ^ index.php [L]
+RewriteRule ^ src/index.php [L]
 RewriteRule ^/realisation$ src/realisation.php [L]
 RewriteRule ^/contact$ src/contact.php [L]
 
