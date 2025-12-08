@@ -145,14 +145,14 @@
   </header>
   
   <main class="p-4">
-
+    <h1 class="hidden">Nos Réalisations</h1>
     <section class="carousel md:hidden relative overflow-hidden w-full">
       <div class="carouselTrack flex gap-4 overflow-x-auto overflow-y-hidden snap-x snap-mandatory px-4 py-4 h-[50vh]"> 
         <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet1', this)">
           <img src="assets/realSkateBoardCrop.png" class="w-full h-[50vh] object-cover rounded-xl" />
         </div>
 
-          <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet2', this)">
+            <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet2', this)">
                 <img src="assets/portfolioSean.png" class="w-full h-[50vh] object-cover rounded-xl" />
             </div>
 
@@ -235,7 +235,7 @@
 
   <div class="modal fixed inset-0 pb-2 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center hidden z-10">
     <div class="modal-content bg-[#FAFAFA]/90 rounded-xl w-[70%] max-h-[90vh] p-5 overflow-y-auto">
-      <button class="modal-close text-black text32 font-bold float-right">×</button>
+      <button class="modal-close text-black text32 font-bold float-right cursor-pointer">×</button>
       <img class="modal-image w-full max-h-[40vh] rounded-b-xl mb-4" src="">
       <h3 class="modal-title title32 tracking-[.25em] text-black border-b-1 border-black pb-1 mb-4 inline-block"></h3>
       <div class="modal-tags flex flex-wrap gap-3 mb-8"></div>

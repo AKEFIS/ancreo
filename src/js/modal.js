@@ -118,31 +118,6 @@ function openModal(key, cardElement) {
     });
 }
 
-document.querySelector(".modal-close").addEventListener("click", () => {
-    const modal = document.querySelector(".modal");
-    const modalContent = document.querySelector(".modal-content");
-
-    gsap.to(modalContent, {
-        duration: 0.3,
-        opacity: 0,
-        scale: 0.7,
-        ease: "power3.in",
-        onComplete: () => modal.classList.add("hidden")
-    });
-});
-
-document.querySelector(".modal-close").addEventListener("click", () => {
-    const modal = document.querySelector(".modal");
-    const modalContent = document.querySelector(".modal-content");
-
-    gsap.to(modalContent, {
-        duration: 0.3,
-        opacity: 0,
-        scale: 0.7,
-        ease: "power3.in",
-        onComplete: () => modal.classList.add("hidden")
-    });
-});
 
 const track = document.querySelector(".carouselTrack");
 const slides = document.querySelectorAll(".carousel-slide");
@@ -178,6 +153,40 @@ function updateActiveSlide() {
         closest.classList.remove("scale-[0.85]", "opacity-50", "blur-sm", "filter", "grayscale");
     }
 }
+
+function closeModal() {
+    const modal = document.querySelector(".modal");
+    const modalContent = document.querySelector(".modal-content");
+
+    gsap.to(modalContent, {
+        duration: 0.3,
+        opacity: 0,
+        scale: 0.7,
+        ease: "power3.in",
+        onComplete: () => modal.classList.add("hidden")
+    });
+}
+
+// Fermeture de la modal au clic sur la croix
+document.querySelector(".modal-close").addEventListener("click", closeModal);
+// Fermeture de la modal au clic en dehors
+document.querySelector(".modal").addEventListener("click", (e) => {
+    const modalContent = document.querySelector(".modal-content");
+
+    if (!modalContent.contains(e.target)) {
+        closeModal();
+    }
+});
+// Fermeture de la modal à l'appui de la touche Échap
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        const modal = document.querySelector(".modal");
+        if (!modal.classList.contains("hidden")) {
+            closeModal();
+        }
+    }
+});
+
 
 track.addEventListener("scroll", () => {
     requestAnimationFrame(updateActiveSlide);
