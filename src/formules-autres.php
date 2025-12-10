@@ -84,7 +84,6 @@
     </div>
   </section>
 
-
   <!-- Call to Action -->
   <section class="py-16 px-6">
     <div class="max-w-7xl mx-auto bg-gray rounded-3xl p-16 text-center cta-section">

@@ -41,7 +41,7 @@
             <a href="/formule-basique"><li class="hover:bg-gray-200 px-4 py-2">
               <p>Formule Basique</p>
             </li></a>
-            <a href="/formule-autre"><li class="hover:bg-gray-200 px-4 py-2">
+            <a href="/formules-autres"><li class="hover:bg-gray-200 px-4 py-2">
               <p>Autre formules</p>
             </li></a>
           </ul>
@@ -119,7 +119,7 @@
               <a href="/formule-basique" class="text-white text24"><li class="border-b border-gray px-4 py-3">
                 <p>Formule Basique</p>
               </li></a>
-              <a href="/formule-autres" class="text-white text24"><li class="px-4 py-3">
+              <a href="/formules-autres" class="text-white text24"><li class="px-4 py-3">
                 <p>Autre formules</p>
               </li></a>
             </ul>
