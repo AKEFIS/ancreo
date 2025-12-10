@@ -1,5 +1,19 @@
 <?php include('components/header.php'); ?>
 <title>Formule Basique</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Formule Basique – Ancreo",
+  "description": "Notre formule pour votre site vitrine : création de site vitrine optimisé, formulaire de contact, SEO, hébergement et nom de domaine.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Ancreo",
+    "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/"
+  }
+}
+</script>
+
 <?php include('components/navbar.php'); ?>
   <!-- Hero Section -->
   <section class="py-16 px-6">

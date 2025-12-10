@@ -1,5 +1,19 @@
 <?php include('components/header.php'); ?>
 <title>Formule Avancée</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Formule Avancée – Ancreo",
+  "description": "Notre formule pour vos applications web : développement sur mesure, ateliers d’idéation, hébergement et nom de domaine.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Ancreo",
+    "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/"
+  }
+}
+</script>
+
 <?php include('components/navbar.php'); ?>
 
   <!-- Hero Section -->

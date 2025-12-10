@@ -1,5 +1,19 @@
 <?php include('components/header.php'); ?>
 <title>Formule Globale</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Formule Globale – Ancreo",
+  "description": "Notre formule la plus complète : structure juridique, business plan, consultations avec des experts, accès à une communauté d'experts, mentorat et formation continue.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Ancreo",
+    "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/"
+  }
+}
+</script>
+
 <?php include('components/navbar.php'); ?>
   <!-- Hero Section -->
   <section class="py-16 px-6">

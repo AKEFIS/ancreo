@@ -1,5 +1,31 @@
 <?php include('components/header.php'); ?>
 <title>Autres Formules</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Autres Formules – Ancreo",
+  "description": "Découvrez nos formules personnalisées : Formule sur mesure, Formule Refonte et Formule Maintenance, adaptées aux besoins spécifiques de votre projet web.",
+  "hasPart": [
+    {
+      "@type": "Service",
+      "name": "Formule sur mesure",
+      "description": "Solution parfaitement adaptée aux besoins spécifiques du client, incluant définition des objectifs, fonctionnalités uniques et développement sur mesure."
+    },
+    {
+      "@type": "Service",
+      "name": "Formule Refonte",
+      "description": "Renouvellement de votre image en ligne, modernisation du design, optimisation de l'expérience utilisateur et intégration des dernières technologies."
+    },
+    {
+      "@type": "Service",
+      "name": "Formule Maintenance",
+      "description": "Suivi régulier des performances, mises à jour de sécurité et assistance technique pour assurer le bon fonctionnement et la sécurité de votre site."
+    }
+  ]
+}
+</script>
+
 <?php include('components/navbar.php'); ?>
   <!-- Hero Section -->
   <section class="py-16 px-6">
