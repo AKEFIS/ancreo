@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formules Autres - Ancreo</title>
-  <link rel="stylesheet" href="../css/output.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="../js/formules.js" defer></script>
-</head>
-
-<body class="bg-lightBlack text-gray">
-
-  <!-- Navigation -->
-  <nav class="px-6 py-4 sticky top-0 bg-lightBlack z-10">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <div class="text32">Ancreo</div>
-      <div class="flex items-center gap-8">
-        <a href="#" class="text16 nav-link">Accueil</a>
-        <a href="#" class="text16 bg-gray rounded text-black px-6 py-2 nav-link-active">Formules</a>
-        <a href="#" class="text16 nav-link">Réalisations</a>
-        <a href="#" class="text16 nav-link">Contact</a>
-      </div>
-    </div>
-  </nav>
-
+<?php include('components/header.php'); ?>
+<title>Autres Formules</title>
+<?php include('components/navbar.php'); ?>
   <!-- Hero Section -->
   <section class="py-16 px-6">
     <div class="max-w-7xl mx-auto text-center">
@@ -124,30 +96,4 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-black py-12 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
-        <div>
-          <div class="text16 text-gray mb-4">Ancreo</div>
-          <p class="text16 text-gray mb-2">3-4 Boulevard Einstein</p>
-          <p class="text16 text-gray mb-2">17000 LA ROCHELLE - France</p>
-          <p class="text16 text-gray mb-2">Tél : 06 50 02 17 35</p>
-          <p class="text16 text-gray">Mail : ancreo17@gmail.com</p>
-        </div>
-        <div class="flex flex-col gap-3">
-          <a href="#" class="text16 text-gray footer-link">Accueil</a>
-          <a href="#" class="text16 text-gray footer-link">Services</a>
-          <a href="#" class="text16 text-gray footer-link">Réalisations</a>
-          <a href="#" class="text16 text-gray footer-link">Contact</a>
-        </div>
-      </div>
-      <div class="text-center pt-8 border-t border-lightBlack">
-        <p class="text16 text-gray">Copyright Ancreo © 2025 All rights reserved</p>
-      </div>
-    </div>
-  </footer>
-
-</body>
-
-</html>
+<?php include 'components/footer.php'; ?>

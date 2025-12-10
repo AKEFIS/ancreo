@@ -29,21 +29,21 @@
           <ul
             id="submenu-desktop"
             class="absolute left-0 top-full opacity-0 pointer-events-none bg-white text-black shadow-lg w-48">
-            <li class="hover:bg-gray-200 px-4 py-2">
-              <a href="/formule-globale">Formule Globale</a>
-            </li>
-            <li class="hover:bg-gray-200 px-4 py-2">
-              <a href="/formule-premium">Formule Premium</a>
-            </li>
-            <li class="hover:bg-gray-200 px-4 py-2">
-              <a href="/formule-avancee">Formule Avancée</a>
-            </li>
-            <li class="hover:bg-gray-200 px-4 py-2">
-              <a href="/formule-basique">Formule Basique</a>
-            </li>
-            <li class="hover:bg-gray-200 px-4 py-2">
-              <a href="/formule-autre">Autre formules</a>
-            </li>
+            <a href="/formule-globale"><li class="hover:bg-gray-200 px-4 py-2">
+              <p>Formule Globale</p>
+            </li></a>
+            <a href="/formule-premium"><li class="hover:bg-gray-200 px-4 py-2">
+              <p>Formule Premium</p>
+            </li></a>
+            <a href="/formule-avancee"><li class="hover:bg-gray-200 px-4 py-2">
+              <p>Formule Avancée</p>
+            </li></a>
+            <a href="/formule-basique"><li class="hover:bg-gray-200 px-4 py-2">
+              <p>Formule Basique</p>
+            </li></a>
+            <a href="/formule-autre"><li class="hover:bg-gray-200 px-4 py-2">
+              <p>Autre formules</p>
+            </li></a>
           </ul>
         </li>
         <li
@@ -107,21 +107,21 @@
               </svg>
             </button>
             <ul id="submenu-mobile" class="hidden bg-black">
-              <li class="block border-b border-gray px-4 py-3">
-                <a href="/formule-globale" class="text-white text24">Formule Globale</a>
-              </li>
-              <li class="border-b border-gray px-4 py-3">
-                <a href="/formule-premium" class="text-white text24">Formule Premium</a>
-              </li>
-              <li class="border-b border-gray px-4 py-3">
-                <a href="/formule-avancee" class="text-white text24">Formule Avancée</a>
-              </li>
-              <li class="border-b border-gray px-4 py-3">
-                <a href="/formule-basique" class="text-white text24">Formule Basique</a>
-              </li>
-              <li class="px-4 py-3">
-                <a href="/formule-autres" class="text-white text24">Autre formules</a>
-              </li>
+              <a href="/formule-globale" class="text-white text24"><li class="block border-b border-gray px-4 py-3">
+                <p>Formule Globale</p>
+              </li></a>
+              <a href="/formule-premium" class="text-white text24"><li class="border-b border-gray px-4 py-3">
+                <p>Formule Premium</p>
+              </li></a>
+              <a href="/formule-avancee" class="text-white text24"><li class="border-b border-gray px-4 py-3">
+                <p>Formule Avancée</p>
+              </li></a>
+              <a href="/formule-basique" class="text-white text24"><li class="border-b border-gray px-4 py-3">
+                <p>Formule Basique</p>
+              </li></a>
+              <a href="/formule-autres" class="text-white text24"><li class="px-4 py-3">
+                <p>Autre formules</p>
+              </li></a>
             </ul>
           </li>
           <li class="border-b border-gray px-4 py-3">
