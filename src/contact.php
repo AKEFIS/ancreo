@@ -1,5 +1,25 @@
 <?php include 'components/header.php'; ?>
 <title>Contact</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact – Ancreo",
+  "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/contact",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Ancreo",
+    "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33 7 37 94 27 65",
+      "contactType": "customer service",
+      "email": "contact@agence-ancreo.lpmiaw.univ-lr.fr",
+      "availableLanguage": ["French"]
+    }
+  }
+}
+</script>
 <?php include 'components/navbar.php'; ?>
 
   <main class="p-4 my-4">

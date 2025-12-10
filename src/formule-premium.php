@@ -1,5 +1,19 @@
 <?php include('components/header.php'); ?>
 <title>Formule Premium</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Formule Premium – Ancreo",
+  "description": "Notre formule clé en main pour votre boutique E-Commerce : création de boutique en ligne, analyse des besoins et études de marché, hébergement, nom de domaine, formation à la gestion de la boutique, conseils juridiques et formation continue.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Ancreo",
+    "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/"
+  }
+}
+</script>
+
 <?php include('components/navbar.php'); ?>
   <!-- Hero Section -->
   <section class="py-16 px-6">

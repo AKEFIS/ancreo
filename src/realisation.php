@@ -1,6 +1,15 @@
 <?php include 'components/header.php'; ?>
 <title>Réalisation</title>
     <script src="/src/js/modal.js" defer></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Réalisation - Ancreo",
+  "description": "Découvrez nos différents projets réalisés : sites web, applications, designs et créations digitales.",
+  "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/realisation"
+}
+</script>
 <?php include 'components/navbar.php'; ?>
   
   <main class="p-4">

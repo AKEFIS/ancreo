@@ -16,3 +16,22 @@
     referrerpolicy="no-referrer"></script>
     <script src="/src/js/navbarMobile.js" defer></script>
     <script src="/src/js/navbarDesktop.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "name": "Ancreo",
+          "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "44 avenue Albert Einstein",
+            "addressLocality": "La Rochelle",
+            "postalCode": "17000",
+            "addressCountry": "FR"
+          }
+        }
+      ]
+    }
+    </script>

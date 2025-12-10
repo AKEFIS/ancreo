@@ -14,6 +14,40 @@
 <script type="module" src="./src/js/index/hero.js" defer></script>
 <script type="module" src="./src/js/index/index.js" defer></script>
 <script type="module" src="./src/js/index/carousel.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Accompagnement auto-entrepreneur",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Ancreo"
+      },
+      "description": "Accompagnement complet des auto-entrepreneurs : démarches, business plan, conseils juridiques et comptables."
+    },
+    {
+      "@type": "Service",
+      "name": "Création de sites web",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Ancreo"
+      },
+      "description": "Création de sites vitrines et web apps sur mesure."
+    },
+    {
+      "@type": "Service",
+      "name": "Refonte de sites web",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Ancreo"
+      },
+      "description": "Refonte pour moderniser votre présence en ligne et améliorer l'expérience utilisateur."
+    }
+  ]
+}
+</script>
 <?php include 'components/navbar.php'; ?>
 
 <body class="bg-dark-black flex flex-col min-h-screen text-white overflow-x-hidden">
@@ -140,11 +174,9 @@
                 <li>Formation continue</li>
               </ul>
             </div>
-            <a href="/formule-globale">
             <button class="w-full bg-blue-500 text-white py-3 rounded-full hover:bg-blue-600 font-semibold mt-auto transition-colors">
               En savoir plus
             </button>
-            </a>
           </div>
 
           <div class="carousel-card w-[85vw] sm:w-[400px] flex-shrink-0 bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-2xl cursor-pointer">
@@ -168,11 +200,9 @@
                 <li>Assistance comptable pour la gestion des ventes et des taxes</li>
               </ul>
             </div>
-            <a href="/formule-premium">
             <button class="w-full bg-blue-500 text-white py-3 rounded-full hover:bg-blue-600 font-semibold mt-auto transition-colors">
               En savoir plus
             </button>
-            </a>
           </div>
 
           <div class="carousel-card w-[85vw] sm:w-[400px] flex-shrink-0 bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-2xl cursor-pointer">
@@ -194,11 +224,9 @@
                 <li>Aide à la mise en place d’un plan de marketing digital</li>
               </ul>
             </div>
-            <a href="formule-avancee">
             <button class="w-full bg-blue-500 text-white py-3 rounded-full hover:bg-blue-600 font-semibold mt-auto transition-colors">
               En savoir plus
             </button>
-            </a>
           </div>
 
           <div class="carousel-card w-[85vw] sm:w-[400px] flex-shrink-0 bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-2xl cursor-pointer">
@@ -221,11 +249,9 @@
                 <li>Options de mise à jour du contenu</li>
               </ul>
             </div>
-            <a href="formule-basique">
             <button class="w-full bg-blue-500 text-white py-3 rounded-full hover:bg-blue-600 font-semibold mt-auto transition-colors">
               En savoir plus
             </button>
-            </a>
           </div>
 
           <div class="carousel-card w-[85vw] sm:w-[400px] flex-shrink-0 bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-2xl cursor-pointer">
@@ -239,11 +265,9 @@
                 Prenez contact avec notre équipe et nous vous proposerons une formule sur mesure qui répondra au mieux à toutes vos attentes !
               </p>
             </div>
-            <a href="/formules-autres">
             <button class="w-full bg-blue-500 text-white py-3 rounded-full hover:bg-blue-600 font-semibold mt-auto transition-colors">
               Nous contacter
             </button>
-            </a>
           </div>
 
           <div class="carousel-card w-[85vw] sm:w-[400px] flex-shrink-0 bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-2xl cursor-pointer">
@@ -257,11 +281,9 @@
                 Contactez-nous et nous déterminerons les meilleurs choix pour votre business !
               </p>
             </div>
-            <a href="/formules-autres">
             <button class="w-full bg-blue-500 text-white py-3 rounded-full hover:bg-blue-600 font-semibold mt-auto transition-colors">
               Nous contacter
             </button>
-            </a>
           </div>
 
           <div class="carousel-card w-[85vw] sm:w-[400px] flex-shrink-0 bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-2xl cursor-pointer">
@@ -275,11 +297,9 @@
                 Prenez contact avec notre équipe et nous vous proposerons une formule sur mesure qui répondra au mieux à toutes vos attentes !
               </p>
             </div>
-            <a href="/formules-autres">
             <button class="w-full bg-blue-500 text-white py-3 rounded-full hover:bg-blue-600 font-semibold mt-auto transition-colors">
               Nous contacter
             </button>
-            </a>
           </div>
 
         </div>
