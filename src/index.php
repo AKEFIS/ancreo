@@ -11,9 +11,9 @@
 </script>
 
 <!-- SCRIPTS -->
-<script type="module" src="./js/index/hero.js" defer></script>
-<script type="module" src="./js/index/index.js" defer></script>
-<script type="module" src="./js/index/carousel.js" defer></script>
+<script type="module" src="./src/js/index/hero.js" defer></script>
+<script type="module" src="./src/js/index/index.js" defer></script>
+<script type="module" src="./src/js/index/carousel.js" defer></script>
 <?php include 'components/navbar.php'; ?>
 
 <body class="bg-dark-black flex flex-col min-h-screen text-white overflow-x-hidden">

@@ -1,6 +1,6 @@
 <?php include 'components/header.php'; ?>
 <title>Réalisation</title>
-    <script src="js/modal.js" defer></script>
+    <script src="/src/js/modal.js" defer></script>
 <?php include 'components/navbar.php'; ?>
   
   <main class="p-4">
@@ -8,86 +8,86 @@
     <section class="carousel md:hidden relative overflow-hidden w-full">
       <div class="carouselTrack flex gap-4 overflow-x-auto overflow-y-hidden snap-x snap-mandatory px-4 py-4 h-[50vh]"> 
         <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet1', this)">
-          <img src="assets/realSkateBoardCrop.png" class="w-full h-[50vh] object-cover rounded-xl" />
+          <img src="/srcassets/realSkateBoardCrop.png" class="w-full h-[50vh] object-cover rounded-xl" />
         </div>
 
           <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet2', this)">
-                <img src="assets/portfolioSean.png" class="w-full h-[50vh] object-cover rounded-xl" />
+                <img src="/src/assets/portfolioSean.png" class="w-full h-[50vh] object-cover rounded-xl" />
             </div>
 
             <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet3', this)">
-                <img src="assets/AncreoV1.png" class="w-full h-[50vh] object-cover rounded-xl" />
+                <img src="/src/assets/AncreoV1.png" class="w-full h-[50vh] object-cover rounded-xl" />
             </div>
 
             <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet4', this)">
-                <img src="assets/steamLike.png" class="w-full h-[50vh] object-cover rounded-xl" />
+                <img src="/src/assets/steamLike.png" class="w-full h-[50vh] object-cover rounded-xl" />
             </div>
 
             <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet5', this)">
-                <img src="assets/quizList.png" class="w-full h-[50vh] object-cover rounded-xl" />
+                <img src="/src/assets/quizList.png" class="w-full h-[50vh] object-cover rounded-xl" />
             </div>
 
             <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet6', this)">
-                <img src="assets/podly.png" class="w-full h-[50vh] object-cover rounded-xl" />
+                <img src="/src/assets/podly.png" class="w-full h-[50vh] object-cover rounded-xl" />
             </div>
 
             <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet7', this)">
-                <img src="assets/biblio.png" class="w-full h-[50vh] object-cover rounded-xl" />
+                <img src="/src/assets/biblio.png" class="w-full h-[50vh] object-cover rounded-xl" />
             </div>
 
             <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet8', this)">
-                <img src="assets/Atlas.png" class="w-full h-[50vh] object-cover rounded-xl" />
+                <img src="/src/assets/Atlas.png" class="w-full h-[50vh] object-cover rounded-xl" />
             </div>
 
             <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet9', this)">
-                <img src="assets/Magic.png" class="w-full h-[50vh] object-cover rounded-xl" />
+                <img src="/src/assets/Magic.png" class="w-full h-[50vh] object-cover rounded-xl" />
             </div>
 
             <div class="carousel-slide flex-shrink-0 snap-center w-[70%] transition-transform duration-300 ease-in-out" onclick="openModal('projet10', this)">
-                <img src="assets/BgCollect.png" class="w-full h-[50vh] object-cover object-top rounded-xl"/>
+                <img src="/src/assets/BgCollect.png" class="w-full h-[50vh] object-cover object-top rounded-xl"/>
             </div>
         </div>
     </section>
 
       <section class="hidden md:flex gap-5 justify-center max-w-full">
         <div class="card cursor-pointer overflow-hidden rounded-1xl group transform transition-transform duration-500 hover:scale-105" onclick="openModal('projet1', this)">
-          <img src="assets/realSkateBoardCrop.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none brightness-90 hover:border-white hover:bg-white/10 ">
+          <img src="/src/assets/realSkateBoardCrop.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none brightness-90 hover:border-white hover:bg-white/10 ">
         </div>
 
         <div class="card cursor-pointer overflow-hidden rounded-1xl group transform transition-transform duration-500 hover:scale-105" onclick="openModal('projet2', this)">
-          <img src="assets/portfolioSean.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none brightness-90 group-hover:brightness-110">
+          <img src="/src/assets/portfolioSean.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none brightness-90 group-hover:brightness-110">
         </div>
 
         <div class="card cursor-pointer overflow-hidden rounded-1xl group transform transition-transform duration-500 hover:scale-105" onclick="openModal('projet3', this)">
-          <img src="assets/AncreoV1.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:filter-none brightness-90 group-hover:brightness-110">
+          <img src="/src/assets/AncreoV1.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:filter-none brightness-90 group-hover:brightness-110">
         </div>
 
         <div class="card cursor-pointer overflow-hidden rounded-1xl shadow-lg transform transition duration-500 ease-in-out hover:scale-105 hover:-translate-y-2 hover:shadow-2xl group" onclick="openModal('projet4', this)">
-          <img src="assets/steamLike.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
+          <img src="/src/assets/steamLike.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
         </div>
 
         <div class="card cursor-pointer overflow-hidden rounded-1xl shadow-lg transform transition duration-500 ease-in-out hover:scale-105 hover:-translate-y-2 hover:shadow-2xl group" onclick="openModal('projet5', this)">
-          <img src="assets/quizList.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
+          <img src="/src/assets/quizList.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
         </div>
 
         <div class="card cursor-pointer overflow-hidden rounded-1xl shadow-lg transform transition duration-500 ease-in-out hover:scale-105 hover:-translate-y-2 hover:shadow-2xl group" onclick="openModal('projet6', this)">
-          <img src="assets/podly.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
+          <img src="/src/assets/podly.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
         </div>
                 
         <div class="card cursor-pointer overflow-hidden rounded-1xl group transform transition-transform duration-500 hover:scale-105" onclick="openModal('projet7', this)">
-          <img src="assets/biblio.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
+          <img src="/src/assets/biblio.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
         </div>
 
         <div class="card cursor-pointer overflow-hidden rounded-1xl group transform transition-transform duration-500 hover:scale-105" onclick="openModal('projet8', this)">
-          <img src="assets/Atlas.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
+          <img src="/src/assets/Atlas.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
         </div>
 
         <div class="card cursor-pointer overflow-hidden rounded-1xl group transform transition-transform duration-500 hover:scale-105" onclick="openModal('projet9', this)">
-          <img src="assets/Magic.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
+          <img src="/src/assets/Magic.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
         </div>
 
         <div class="card cursor-pointer overflow-hidden rounded-1xl group transform transition-transform duration-500 hover:scale-105" onclick="openModal('projet10', this)">
-          <img src="assets/BgCollect.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
+          <img src="/src/assets/BgCollect.png" class="w-[84px] h-[50vh] object-cover rounded-1xl transition-transform duration-500 group-hover:scale-120 filter grayscale group-hover:filter-none">
         </div>
       </section>
     </main>
