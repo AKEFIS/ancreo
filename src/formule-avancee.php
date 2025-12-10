@@ -115,30 +115,4 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-black py-12 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
-        <div>
-          <div class="text16 text-gray mb-4">Ancreo</div>
-          <p class="text16 text-gray mb-2">3-4 Boulevard Einstein</p>
-          <p class="text16 text-gray mb-2">17000 LA ROCHELLE - France</p>
-          <p class="text16 text-gray mb-2">Tél : 06 50 02 17 35</p>
-          <p class="text16 text-gray">Mail : ancreo17@gmail.com</p>
-        </div>
-        <div class="flex flex-col gap-3">
-          <a href="#" class="text16 text-gray footer-link">Accueil</a>
-          <a href="#" class="text16 text-gray footer-link">Services</a>
-          <a href="#" class="text16 text-gray footer-link">Réalisations</a>
-          <a href="#" class="text16 text-gray footer-link">Contact</a>
-        </div>
-      </div>
-      <div class="text-center pt-8 border-t border-lightBlack">
-        <p class="text16 text-gray">Copyright Ancreo © 2025 All rights reserved</p>
-      </div>
-    </div>
-  </footer>
-
-</body>
-
-</html>
+  <?php include 'components/footer.php'; ?>
