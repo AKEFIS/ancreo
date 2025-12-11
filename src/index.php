@@ -129,6 +129,7 @@ include 'components/header.php';
 
 ?>
 <title>Accueil</title>
+<meta name="description" content="Ancreo, agence web à La Rochelle : création de sites web, refonte, e-commerce, développement sur mesure et accompagnement complet pour entrepreneurs, start-up et entreprises. Découvrez nos formules adaptées à chaque étape de votre croissance.">
 <!-- THREE.JS -->
 <script type="importmap">
   {

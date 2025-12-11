@@ -1,5 +1,6 @@
 <?php include('components/header.php'); ?>
 <title>Formule Globale</title>
+<meta name="description" content="Découvrez la Formule Globale d’Ancreo : accompagnement complet pour entrepreneurs avec choix de la structure juridique, business plan, consultations d’experts, communauté professionnelle, mentorat et formation continue.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

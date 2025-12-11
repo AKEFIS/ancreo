@@ -1,5 +1,6 @@
 <?php include('components/header.php'); ?>
 <title>Autres Formules</title>
+<meta name="description" content="Découvrez les autres formules d’Ancreo : solutions sur mesure, refonte complète de site et maintenance continue. Des services personnalisés pour répondre aux besoins spécifiques de votre projet web.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
