@@ -8,24 +8,21 @@ const prevBtn = document.getElementById('carousel-prev');
 const nextBtn = document.getElementById('carousel-next');
 
 let currentIndex = 0;
-// Espacement (doit correspondre au gap CSS du track, ex: gap-6 ou gap-10)
 let gap = window.innerWidth < 640 ? 24 : 40;
 let cardWidth = 0;
 
 // Variables pour le Swipe
 let startX = 0;
 let isDragging = false;
-// NOUVEAU : Variable pour empêcher le clic si on est en train de swiper
+let startTrackX = 0;
 let isClickBlocked = false;
 
 function init() {
   if (!container || cards.length === 0) return;
 
   updateDimensions();
-  // On force la mise à jour immédiate
   updateCarousel(false);
 
-  // Animation d'entrée du carrousel au scroll
   gsap.from(container, {
     opacity: 0,
     y: 50,
@@ -36,13 +33,9 @@ function init() {
     }
   });
 
-  // --- NOUVEAU : RENDRE LES CARTES CLIQUABLES ---
   cards.forEach((card, index) => {
     card.addEventListener('click', () => {
-      // 1. Si on a détecté un swipe juste avant, on ignore le clic
       if (isClickBlocked) return;
-
-      // 2. Si on clique sur une carte qui n'est pas celle du centre, on y va
       if (currentIndex !== index) {
         goTo(index);
       }
@@ -62,38 +55,32 @@ function updateDimensions() {
   }
 }
 
-function updateCarousel(animate = true) {
-  // 1. Calcul du centrage
-  // Le track est padding-left: 50vw.
-  // On décale vers la gauche de : (index * (largeur + gap)) + (largeur / 2)
-  const centerOffset = (currentIndex * (cardWidth + gap)) + (cardWidth / 2);
-  const x = -centerOffset;
+function getTrackPosition(index) {
+  const centerOffset = (index * (cardWidth + gap)) + (cardWidth / 2);
+  return -centerOffset;
+}
 
-  // Animation du déplacement du track
-  if (animate) {
-    gsap.to(track, {
-      x: x,
-      duration: 0.6,
-      ease: "power3.out"
-    });
-  } else {
-    gsap.set(track, { x: x });
-  }
+// Fonction dédiée aux styles (appelée pendant le drag aussi)
+function updateCardStyles(targetIndex) {
+  // On s'assure que l'index est valide (modulo) pour les styles
+  // Exemple: si on glisse vers -1, on veut que le style corresponde à la dernière carte
+  let visualIndex = targetIndex % cards.length;
+  if (visualIndex < 0) visualIndex += cards.length;
 
-  // 2. Animation des cartes (Focus / Flou)
   cards.forEach((card, index) => {
-    const isActive = index === currentIndex;
+    const isActive = index === visualIndex;
 
+    // Transition plus rapide pendant le drag (0.2s) pour la réactivité
     gsap.to(card, {
-      scale: isActive ? 1 : 0.9,       // Actif = grand, Autres = petits
-      opacity: isActive ? 1 : 0.4,     // Actif = visible, Autres = grisés
-      filter: isActive ? "blur(0px)" : "blur(2px)", // Actif = net, Autres = flous
+      scale: isActive ? 1 : 0.9,
+      opacity: isActive ? 1 : 0.4,
+      filter: isActive ? "blur(0px)" : "blur(2px)",
       zIndex: isActive ? 10 : 1,
-      duration: 0.6,
-      ease: "power3.out"
+      duration: isDragging ? 0.2 : 0.6,
+      ease: "power3.out",
+      overwrite: "auto" // Important pour ne pas confliter
     });
 
-    // Gestion des bordures (Bleu pour l'actif, Gris pour les autres)
     if (isActive) {
       card.classList.add('border-blue-500');
       card.classList.remove('border-gray');
@@ -103,9 +90,8 @@ function updateCarousel(animate = true) {
     }
   });
 
-  // 3. Indicateurs (les petits points)
   indicators.forEach((ind, i) => {
-    const isActive = i === currentIndex;
+    const isActive = i === visualIndex;
     gsap.to(ind, {
       width: isActive ? 24 : 8,
       backgroundColor: isActive ? '#3b82f6' : 'rgba(156, 163, 175, 0.4)',
@@ -114,85 +100,144 @@ function updateCarousel(animate = true) {
   });
 }
 
-// --- FONCTION DE NAVIGATION (BOUCLE INFINIE) ---
-function goTo(index) {
-  // Si on dépasse la fin -> Retour au début
-  if (index >= cards.length) {
-    currentIndex = 0;
-  }
-  // Si on recule avant le début -> Aller à la fin
-  else if (index < 0) {
-    currentIndex = cards.length - 1;
-  }
-  // Sinon -> Navigation normale
-  else {
-    currentIndex = index;
+function updateCarousel(animate = true) {
+  const x = getTrackPosition(currentIndex);
+
+  if (animate) {
+    gsap.to(track, { x: x, duration: 0.6, ease: "power3.out" });
+  } else {
+    gsap.set(track, { x: x });
   }
 
+  // Appliquer les styles à l'index final
+  updateCardStyles(currentIndex);
+}
+
+function goTo(index) {
+  if (!cards.length) return;
+  if (index >= cards.length) {
+    currentIndex = 0;
+  } else if (index < 0) {
+    currentIndex = cards.length - 1;
+  } else {
+    currentIndex = index;
+  }
   updateCarousel();
 }
 
-// --- ÉCOUTEURS D'ÉVÉNEMENTS ---
-
-if (prevBtn) prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
-if (nextBtn) nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
-
+// --- BOUTONS ---
+if (prevBtn) {
+  prevBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    goTo(currentIndex - 1);
+  });
+}
+if (nextBtn) {
+  nextBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    goTo(currentIndex + 1);
+  });
+}
 indicators.forEach((ind, i) => {
-  ind.addEventListener('click', () => goTo(i));
+  ind.addEventListener('click', (e) => {
+    e.preventDefault();
+    goTo(i);
+  });
 });
 
-// Navigation Clavier
 window.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
   if (e.key === 'ArrowRight') goTo(currentIndex + 1);
 });
 
+// --- SWIPE TEMPS RÉEL (DRAG) ---
 
-// --- GESTION DU TACTILE (SWIPE) ---
+container.addEventListener('mousedown', startDrag);
+container.addEventListener('touchstart', startDrag);
 
-container.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  startX = e.pageX;
-  container.style.cursor = 'grabbing';
-});
-
-container.addEventListener('touchstart', (e) => {
-  isDragging = true;
-  startX = e.touches[0].clientX;
-});
+window.addEventListener('mousemove', onDrag);
+window.addEventListener('touchmove', onDrag);
 
 window.addEventListener('mouseup', endDrag);
 window.addEventListener('touchend', endDrag);
+
+function startDrag(e) {
+  isDragging = true;
+  isClickBlocked = false;
+
+  if (e.type === 'touchstart') {
+    startX = e.touches[0].clientX;
+  } else {
+    startX = e.clientX;
+    e.preventDefault();
+  }
+
+  startTrackX = getTrackPosition(currentIndex);
+  gsap.killTweensOf(track);
+  container.style.cursor = 'grabbing';
+}
+
+function onDrag(e) {
+  if (!isDragging) return;
+
+  let clientX;
+  if (e.type === 'touchmove') {
+    clientX = e.touches[0].clientX;
+  } else {
+    clientX = e.clientX;
+  }
+
+  const diff = clientX - startX;
+
+  if (Math.abs(diff) > 5) {
+    isClickBlocked = true;
+  }
+
+  // 1. Bouger le rail
+  gsap.set(track, { x: startTrackX + diff });
+
+  // 2. CALCULER QUELLE CARTE EST AU CENTRE (Mise à jour visuelle immédiate)
+  const cardUnit = cardWidth + gap;
+  // Combien de cartes on a "parcouru" virtuellement
+  // Négatif car glisser à gauche (diff < 0) augmente l'index
+  const cardsMoved = Math.round(-diff / cardUnit);
+  const projectedIndex = currentIndex + cardsMoved;
+
+  // 3. Appliquer les styles sur l'index projeté
+  updateCardStyles(projectedIndex);
+}
 
 function endDrag(e) {
   if (!isDragging) return;
   isDragging = false;
   container.style.cursor = 'grab';
 
-  let endX = 0;
+  let endX;
   if (e.type === 'mouseup') {
-    endX = e.pageX;
+    endX = e.clientX;
   } else if (e.changedTouches) {
     endX = e.changedTouches[0].clientX;
+  } else {
+    updateCarousel();
+    return;
   }
 
   const diff = startX - endX;
+  const cardUnit = cardWidth + gap;
 
-  // Si on a glissé de plus de 50px
-  if (Math.abs(diff) > 50) {
-    // --- CORRECTION ICI : On bloque le clic temporairement ---
-    isClickBlocked = true;
-    setTimeout(() => { isClickBlocked = false; }, 50); // On débloque après 50ms
-
-    if (diff > 0) {
-      // Glissement vers la gauche -> Suivant
-      goTo(currentIndex + 1);
-    } else {
-      // Glissement vers la droite -> Précédent
-      goTo(currentIndex - 1);
-    }
+  if (Math.abs(diff) < 50) {
+    updateCarousel();
+    return;
   }
+
+  let jump = Math.round(diff / cardUnit);
+  if (jump === 0) {
+    jump = diff > 0 ? 1 : -1;
+  }
+
+  goTo(currentIndex + jump);
+
+  setTimeout(() => { isClickBlocked = false; }, 100);
 }
 
-// Démarrage
 init();
