@@ -161,7 +161,7 @@ $modalContent__texte = "modal-text text16 text-black leading-relaxed mb-8";
     </nav>
   </header>
   
-  <main class="p-4">
+  <main class="lg:py-12 py-6 px-4">
     <h1 class="hidden">Nos Réalisations</h1>
     <section class="<?= $carousel ?>">
       <div class="<?= $carouselTrack ?>"> 
