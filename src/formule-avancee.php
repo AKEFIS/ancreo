@@ -1,5 +1,6 @@
 <?php include('components/header.php'); ?>
 <title>Formule Avancée</title>
+<meta name="description" content="Découvrez la Formule Avancée d’Ancreo : développement d’applications web sur mesure, atelier d’idéation, hébergement et nom de domaine offerts. Une solution complète pour concrétiser vos projets numériques.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

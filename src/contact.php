@@ -1,5 +1,6 @@
 <?php include 'components/header.php'; ?>
 <title>Contact</title>
+<meta name="description" content="Contactez l’agence Ancreo à La Rochelle : questions, demandes de devis, accompagnement, création ou refonte de site web. Notre équipe vous répond rapidement.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
