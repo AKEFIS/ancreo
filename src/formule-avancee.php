@@ -20,7 +20,7 @@
 <section class="py-16 px-6">
   <div class="max-w-7xl mx-auto text-center">
     <h1 class="title64 text-gray mb-6 hero-title">Formule Avancée</h1>
-    <p class="text24 text-gray hero-subtitle">L'excellence pour vos <strong class="text-accentuationClair font-extrabold">Applications Web</strong> sur mesure</p>
+    <p class="text24 text-gray hero-subtitle">L'excellence pour vos <strong class="text-accentuationSombre font-extrabold">Applications Web</strong> sur mesure</p>
   </div>
 </section>
 
@@ -109,9 +109,9 @@
   <div class="max-w-7xl mx-auto bg-gray rounded-3xl p-16 text-center cta-section">
     <h2 class="title48 text-black mb-6">Prêt à concrétiser votre projet ?</h2>
     <p class="text16 text-black mb-10">Échangeons sur vos besoins lors d'une <strong class="text-accentuationClair font-extrabold">consultation gratuite</strong>.</p>
-    <button class="bg-black text-gray text16 px-12 py-4 rounded-full cta-button font-bold hover:scale-105 transition-transform duration-300">
+    <a href="contact" class="inline-block bg-black text-gray text16 px-12 py-4 rounded-full cta-button font-bold hover:scale-105 transition-transform duration-300">
       NOUS CONTACTER
-    </button>
+    </a>
   </div>
 </section>
 
