@@ -37,94 +37,94 @@ $modalContent__texte = "modal-text text16 text-black leading-relaxed mb-8";
     <section class="<?= $carousel ?>">
       <div class="<?= $carouselTrack ?>"> 
         <div class="<?= $carouselSlide ?>" onclick="openModal('projet1', this)">
-          <img src="/src/assets/realSkateBoardCrop.png" class="<?= $carouselImage ?>" />
+          <img loading="lazy" src="/src/assets/realSkateBoardCrop.webp" class="<?= $carouselImage ?>" />
         </div>
 
         <div class="<?= $carouselSlide ?>" onclick="openModal('projet2', this)">
-          <img src="/src/assets/portfolioSean.png" class="<?= $carouselImage ?>" />
+          <img loading="lazy" src="/src/assets/portfolioSean.webp" class="<?= $carouselImage ?>" />
         </div>
 
         <div class="<?= $carouselSlide ?>" onclick="openModal('projet3', this)">
-          <img src="/src/assets/AncreoV1.png" class="<?= $carouselImage ?>" />
+          <img loading="lazy" src="/src/assets/AncreoV1.webp" class="<?= $carouselImage ?>" />
         </div>
 
         <div class="<?= $carouselSlide ?>" onclick="openModal('projet4', this)">
-          <img src="/src/assets/steamLike.png" class="<?= $carouselImage ?>" />
+          <img loading="lazy" src="/src/assets/steamLike.webp" class="<?= $carouselImage ?>" />
         </div>
 
         <div class="<?= $carouselSlide ?>" onclick="openModal('projet5', this)">
-          <img src="/src/assets/quizList.png" class="<?= $carouselImage ?>" />
-              </div>
+          <img loading="lazy" src="/src/assets/quizList.webp" class="<?= $carouselImage ?>" />
+        </div>
 
-              <div class="<?= $carouselSlide ?>" onclick="openModal('projet6', this)">
-                  <img src="/src/assets/podly.png" class="<?= $carouselImage ?>" />
-              </div>
+        <div class="<?= $carouselSlide ?>" onclick="openModal('projet6', this)">
+          <img loading="lazy" src="/src/assets/podly.webp" class="<?= $carouselImage ?>" />
+        </div>
 
-              <div class="<?= $carouselSlide ?>" onclick="openModal('projet7', this)">
-                  <img src="/src/assets/biblio.png" class="<?= $carouselImage ?>" />
-              </div>
+        <div class="<?= $carouselSlide ?>" onclick="openModal('projet7', this)">
+          <img loading="lazy" src="/src/assets/biblio.webp" class="<?= $carouselImage ?>" />
+        </div>
 
-              <div class="<?= $carouselSlide ?>" onclick="openModal('projet8', this)">
-                  <img src="/src/assets/Atlas.png" class="<?= $carouselImage ?>" />
-              </div>
+        <div class="<?= $carouselSlide ?>" onclick="openModal('projet8', this)">
+          <img loading="lazy" src="/src/assets/Atlas.webp" class="<?= $carouselImage ?>" />
+        </div>
 
-              <div class="<?= $carouselSlide ?>" onclick="openModal('projet9', this)">
-                  <img src="/src/assets/Magic.png" class="<?= $carouselImage ?>" />
-              </div>
+        <div class="<?= $carouselSlide ?>" onclick="openModal('projet9', this)">
+          <img loading="lazy" src="/src/assets/Magic.webp" class="<?= $carouselImage ?>" />
+        </div>
 
-              <div class="<?= $carouselSlide ?>" onclick="openModal('projet10', this)">
-                  <img src="/src/assets/BgCollect.png" class="<?= $carouselImageGrande ?>"/>
-              </div>
-          </div>
+        <div class="<?= $carouselSlide ?>" onclick="openModal('projet10', this)">
+          <img loading="lazy" src="/src/assets/BgCollect.webp" class="<?= $carouselImageGrande ?>"/>
+        </div>
+      </div>
     </section>
 
-      <section class="<?= $carouselMobile ?>">
-        <div class="<?= $card ?>" onclick="openModal('projet1', this)">
-          <img src="/src/assets/realSkateBoardCrop.png" class="<?= $card__image ?>">
-        </div>
+    <section class="<?= $carouselMobile ?>">
+      <div class="<?= $card ?>" onclick="openModal('projet1', this)">
+        <img loading="lazy" src="/src/assets/realSkateBoardCrop.webp" class="<?= $card__image ?>">
+      </div>
 
-        <div class="<?= $card ?>" onclick="openModal('projet2', this)">
-          <img src="/src/assets/portfolioSean.png" class="<?= $card__image ?>">
-        </div>
+      <div class="<?= $card ?>" onclick="openModal('projet2', this)">
+        <img loading="lazy" src="/src/assets/portfolioSean.webp" class="<?= $card__image ?>">
+      </div>
 
-        <div class="<?= $card ?>" onclick="openModal('projet3', this)">
-          <img src="/src/assets/AncreoV1.png" class="<?= $card__image ?>">
-        </div>
+      <div class="<?= $card ?>" onclick="openModal('projet3', this)">
+        <img loading="lazy" src="/src/assets/AncreoV1.webp" class="<?= $card__image ?>">
+      </div>
 
-        <div class="<?= $card ?>" onclick="openModal('projet4', this)">
-          <img src="/src/assets/steamLike.png" class="<?= $card__image ?>">
-        </div>
+      <div class="<?= $card ?>" onclick="openModal('projet4', this)">
+        <img loading="lazy" src="/src/assets/steamLike.webp" class="<?= $card__image ?>">
+      </div>
 
-        <div class="<?= $card ?>" onclick="openModal('projet5', this)">
-          <img src="/src/assets/quizList.png" class="<?= $card__image ?>">
-        </div>
+      <div class="<?= $card ?>" onclick="openModal('projet5', this)">
+        <img loading="lazy" src="/src/assets/quizList.webp" class="<?= $card__image ?>">
+      </div>
 
-        <div class="<?= $card ?>" onclick="openModal('projet6', this)">
-          <img src="/src/assets/podly.png" class="<?= $card__image ?>">
-        </div>
+      <div class="<?= $card ?>" onclick="openModal('projet6', this)">
+        <img loading="lazy" src="/src/assets/podly.webp" class="<?= $card__image ?>">
+      </div>
                 
-        <div class="<?= $card ?>" onclick="openModal('projet7', this)">
-          <img src="/src/assets/biblio.png" class="<?= $card__image ?>">
-        </div>
+      <div class="<?= $card ?>" onclick="openModal('projet7', this)">
+        <img loading="lazy" src="/src/assets/biblio.webp" class="<?= $card__image ?>">
+      </div>
 
-        <div class="<?= $card ?>" onclick="openModal('projet8', this)">
-          <img src="/src/assets/Atlas.png" class="<?= $card__image ?>">
-        </div>
+      <div class="<?= $card ?>" onclick="openModal('projet8', this)">
+        <img loading="lazy" src="/src/assets/Atlas.webp" class="<?= $card__image ?>">
+      </div>
 
-        <div class="<?= $card ?>" onclick="openModal('projet9', this)">
-          <img src="/src/assets/Magic.png" class="<?= $card__image ?>">
-        </div>
+      <div class="<?= $card ?>" onclick="openModal('projet9', this)">
+        <img loading="lazy" src="/src/assets/Magic.webp" class="<?= $card__image ?>">
+      </div>
 
-        <div class="<?= $card ?>" onclick="openModal('projet10', this)">
-          <img src="/src/assets/BgCollect.png" class="<?= $card__image ?>">
-        </div>
-      </section>
-    </main>
+      <div class="<?= $card ?>" onclick="openModal('projet10', this)">
+        <img loading="lazy" src="/src/assets/BgCollect.webp" class="<?= $card__image ?>">
+      </div>
+    </section>
+  </main>
 
   <div class="<?= $modal ?>">
     <div class="<?= $modalContent ?>">
       <button class="<?= $modalContent__bouton?>">×</button>
-      <img class="<?= $modalContent__image ?>" src="">
+      <img loading="lazy" class="<?= $modalContent__image ?>" src="">
       <h3 class="<?= $modalContent__title ?>"></h3>
       <div class="<?= $modalContent__tag ?>"></div>
       <p class="<?= $modalContent__texte ?>"></p>
