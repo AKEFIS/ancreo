@@ -25,19 +25,19 @@ $style_nav_btn = "bg-lightBlack border border-gray text-white rounded-full w-12 
 $accordionItems = [
   [
     "title" => "Marques & Identité",
-    "desc" => "Ancreo vous accompagne dans la création d’identité de marque claire, stratégique et évolutive. Votre nom, identité visuelle et stratégie vous suivront dans votre croissance."
+    "desc" => "<strong class='text-accentuationSombre font-extrabold'>Ancreo</strong> vous accompagne dans la création d’<strong class='text-accentuationSombre font-extrabold'>identité de marque claire</strong>, stratégique et évolutive. Votre nom, identité visuelle et stratégie vous suivront dans votre croissance."
   ],
   [
     "title" => "Développement Web",
-    "desc" => "Nous donnons vie à vos idées grâce à un code performant, évolutif et maintenable. Sites vitrines, applications sur mesure... notre développement favorise votre croissance."
+    "desc" => "Nous donnons vie à vos idées grâce à un <strong class='text-accentuationSombre font-extrabold'>code performant</strong>, évolutif et maintenable. <strong class='text-accentuationSombre font-extrabold'>Sites vitrines, applications sur mesure</strong>... notre développement favorise votre croissance."
   ],
   [
     "title" => "E-Commerce",
-    "desc" => "Confiance-nous votre projet e-commerce : optimisation des ventes, intégration ERP, boutique personnalisée… Nous maximisons votre efficacité."
+    "desc" => "<strong class='text-accentuationSombre font-extrabold'>Confiez-nous</strong> votre projet e-commerce : <strong class='text-accentuationSombre font-extrabold'>optimisation des ventes</strong>, intégration ERP, boutique personnalisée… Nous maximisons votre efficacité."
   ],
   [
     "title" => "Accompagnement",
-    "desc" => "Grâce à notre accompagnement sur mesure, nous vous guidons de A à Z : juridique, comptabilité, business plan, création de site web et conseils personnalisés."
+    "desc" => "Grâce à notre <strong class='text-accentuationSombre font-extrabold'>accompagnement sur mesure</strong>, nous vous guidons <strong class='text-accentuationSombre font-extrabold'>de A à Z</strong> : juridique, comptabilité, business plan, création de site web et conseils personnalisés."
   ]
 ];
 
@@ -46,10 +46,10 @@ $carouselCards = [
     "title" => "Formule Globale",
     "type" => "list",
     "inclus" => [
-      "L'intégralité des services des formules Premium, Avancée et Basique",
-      "Élaboration d'un business plan",
-      "Consultations régulières avec des experts (juridiques, comptables, marketing)",
-      "Accès à une communauté d'entrepreneur"
+      "<strong class='text-accentuationSombre font-extrabold'>L'intégralité des services</strong> des formules Premium, Avancée et Basique",
+      "Élaboration d'un <strong class='text-accentuationSombre font-extrabold'>business plan</strong>",
+      "Consultations régulières avec des <strong class='text-accentuationSombre font-extrabold'>experts</strong> (juridiques, comptables, marketing)",
+      "Accès à une <strong class='text-accentuationSombre font-extrabold'>communauté</strong> d'entrepreneur"
     ],
     "optionnels" => ["Mentorat", "Formation continue"],
     "cta" => "En savoir plus"
@@ -58,12 +58,12 @@ $carouselCards = [
     "title" => "Formule Premium",
     "type" => "list",
     "inclus" => [
-      "Création d’une boutique e-commerce",
+      "Création d’une <strong class='text-accentuationSombre font-extrabold'>boutique e-commerce</strong>",
       "Analyse des besoins et étude de marché",
       "Intégration des solutions de paiement (Carte Bancaire, PayPal, etc)",
       "Hébergement",
-      "Nom de domaine offert pendant 1 an",
-      "Formation à la gestion de la boutique"
+      "<strong class='text-accentuationSombre font-extrabold'>Nom de domaine offert</strong> pendant 1 an",
+      "<strong class='text-accentuationSombre font-extrabold'>Formation</strong> à la gestion de la boutique"
     ],
     "optionnels" => [
       "Conseils juridiques (RGPD, politique d’expédition et de retour, etc)",
@@ -75,10 +75,10 @@ $carouselCards = [
     "title" => "Formule Avancée",
     "type" => "list",
     "inclus" => [
-      "Développement d’une application web sur mesure",
-      "Atelier d’idéation pour définir les fonctionnalités",
+      "Développement d’une <strong class='text-accentuationSombre font-extrabold'>application web sur mesure</strong>",
+      "<strong class='text-accentuationSombre font-extrabold'>Atelier d’idéation</strong> pour définir les fonctionnalités",
       "Hébergement",
-      "Nom de domaine offert pendant 1 an"
+      "<strong class='text-accentuationSombre font-extrabold'>Nom de domaine offert</strong> pendant 1 an"
     ],
     "optionnels" => [
       "Support juridique pour la conformité réglementaire",
@@ -90,14 +90,14 @@ $carouselCards = [
     "title" => "Formule Basique",
     "type" => "list",
     "inclus" => [
-      "Création d’un site vitrine optimisé",
+      "Création d’un <strong class='text-accentuationSombre font-extrabold'>site vitrine optimisé</strong>",
       "Formulaire de contact et intégration des réseaux sociaux",
-      "Formation à la gestion du site",
+      "<strong class='text-accentuationSombre font-extrabold'>Formation</strong> à la gestion du site",
       "Hébergement",
-      "Nom de domaine offert pendant 1 an"
+      "<strong class='text-accentuationSombre font-extrabold'>Nom de domaine offert</strong> pendant 1 an"
     ],
     "optionnels" => [
-      "Maintenance technique pendant 6 mois",
+      "<strong class='text-accentuationSombre font-extrabold'>Maintenance technique</strong> pendant 6 mois",
       "Options de mise à jour du contenu"
     ],
     "cta" => "En savoir plus"
@@ -106,21 +106,21 @@ $carouselCards = [
     "title" => "Formule Sur mesure",
     "type" => "text",
     "subtitle" => "Vous avez d’autres besoins ?",
-    "desc" => "Prenez contact avec notre équipe et nous vous proposerons une formule sur mesure qui répondra au mieux à toutes vos attentes !",
+    "desc" => "Prenez contact avec notre équipe et nous vous proposerons une formule <strong class='text-accentuationSombre font-extrabold'>sur mesure</strong> qui répondra au mieux à toutes vos attentes !",
     "cta" => "Nous contacter"
   ],
   [
     "title" => "Formule Refonte",
     "type" => "text",
     "subtitle" => "Votre application se fait vieillissante ?",
-    "desc" => "Contactez-nous et nous déterminerons les meilleurs choix pour votre business !",
+    "desc" => "Contactez-nous et nous déterminerons les <strong class='text-accentuationSombre font-extrabold'>meilleurs choix</strong> pour votre business !",
     "cta" => "Nous contacter"
   ],
   [
     "title" => "Formule Maintenance",
     "type" => "text",
     "subtitle" => "Vous avez d’autres besoins ?",
-    "desc" => "Prenez contact avec notre équipe et nous vous proposerons une formule de maintenance adaptée à vos besoins !",
+    "desc" => "Prenez contact avec notre équipe et nous vous proposerons une formule de <strong class='text-accentuationSombre font-extrabold'>maintenance adaptée</strong> à vos besoins !",
     "cta" => "Nous contacter"
   ]
 ];
@@ -188,7 +188,7 @@ include 'components/header.php';
       <h2 class="title32 font-bold mb-4">Votre nouvelle agence web à La Rochelle</h2>
       <p class="text-lg leading-relaxed">
         Notre agence propose un accompagnement personnalisé et adapté pour les
-        <strong class="text-blue-300 font-extrabold">entreprises, start-up, futurs entrepreneurs</strong>
+        <strong class="text-accentuationSombre font-extrabold">entreprises, start-up, futurs entrepreneurs</strong>
         et bien plus !
       </p>
     </div>
@@ -219,7 +219,7 @@ include 'components/header.php';
     </div>
   </section>
 
-  <section id="nos-formules" class="px-0 sm:px-0 py-20 bg-lightBlack overflow-hidden relative">
+  <section id="nos-formules" class="px-0 sm:px-0 py-20 bg-black overflow-hidden relative">
     <div class="px-6 sm:px-20 text-center mb-12">
       <h2 class="title48 mb-4">Nos formules d'accompagnement</h2>
       <p class="text20 text-gray">Une offre adaptée à chaque étape de votre croissance</p>
