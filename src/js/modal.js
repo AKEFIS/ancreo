@@ -1,66 +1,66 @@
 const projects = {
     projet1: {
-        image: "assets/realSkateBoard.png",
+        image: "/src/assets/realSkateBoard.png",
         title: "SnowBoard",
         tags: ["HTML", "CSS", "UX Design"],
         text: "Tout petit site réalisé avec un modèle. A eu l'objet d'un contrôle PHP."
     },
     projet2: {
-        image: "assets/portfolioSean.png",
+        image: "/src/assets/portfolioSean.png",
         title: "Portfolio Sean",
         tags: ["HTML/CSS", "JS", "GSAP"],
         class: "object-cover",
         text: "Portfolio de Sean."
     },
     projet3: {
-        image: "assets/AncreoV1.png",
+        image: "/src/assets/AncreoV1.png",
         title: "Ancreo Premier du Nom",
         tags: ["HTML/CSS", "BEM", "TreeJS"],
         text: "Première version de Ancreo marque le début d'une grande aventure. Paix à son âme."
     },
     projet4: {
-        image: "assets/steamLike.png",
+        image: "/src/assets/steamLike.png",
         title: "SteamLike",
         tags: ["Symfony", "VueJS"],
         text: "Projet réalisé en 2nd année de licence informatique, c'est une reproduction de steam."
     },
     projet5: {
-        image: "assets/quizListGrand.png",
+        image: "/src/assets/quizListGrand.png",
         title: "QuizList",
         tags: ["Figma"],
         class: "object-fill",
         text: "Projet réalisé dans le cadre du cours de Figma, c'est une application de quiz."
     },
     projet6: {
-        image: "assets/PodlyGrand.png",
+        image: "/src/assets/PodlyGrand.png",
         title: "Podly",
         tags: ["Figma"],
         class: "object-fill",
         text: "Projet réalisé dans le cadre du cours de Figma, elle sert à écouter des podcasts."
     },
     projet7: {
-        image: "assets/biblio.png",
+        image: "/src/assets/biblio.png",
         title: "Projet Bibliotheque",
         tags: ["Symfony", "Twig", "Faker"],
         class: "bg-top object-cover",
         text: "Projet réalisé en 2024, a pour but de reproduire un système numérique d'une vraie bibliothèque."
     },
     projet8: {
-        image: "assets/AtlasGrand.png",
+        image: "/src/assets/AtlasGrand.png",
         title: "Atlas",
         tags: ["Figma"],
         class: "bg-top object-cover",
         text: "Projet réalisé dans le cadre du cours de Figma, c'est une application guide touristique dans n'importe quelle ville sélectionnée."
     },
     projet9: {
-        image: "assets/MagicGrand.png",
+        image: "/src/assets/MagicGrand.png",
         title: "Magic",
         tags: ["Figma"],
         class: "bg-top object-cover",
         text: "Projet réalisé dans le cadre du cours de Figma, elle sert a suivre les matchs de magic et regarder les scores en direct."
     },
     projet10: {
-        image: "assets/BgCollectGrand.png",
+        image: "/src/assets/BgCollectGrand.png",
         title: "BGCollect",
         tags: ["Figma"],
         class: "bg-top object-cover",

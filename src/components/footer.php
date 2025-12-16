@@ -3,9 +3,8 @@
       class="flex flex-col gap-5 text20 mb-8 sm:flex-row sm:justify-between sm:gap-0">
       <ul>
         <li>Ancreo</li>
-        <li>44 Boulevard Ablert Einstein</li>
+        <li>44 Boulevard Albert Einstein</li>
         <li>17000 La Rochelle - France</li>
-        <li>Tél : 06 50 02 17 35</li>
         <li>
           <a href="mailto:ancreo17@gmail.com">Email : ancreo17@gmail.com</a>
         </li>

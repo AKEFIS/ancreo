@@ -219,7 +219,7 @@ include 'components/header.php';
     </div>
   </section>
 
-  <section id="nos-formules" class="px-0 sm:px-0 py-20 bg-black overflow-hidden relative">
+  <section id="nos-formules" class="px-0 sm:px-0 py-20 bg-lightBlack overflow-hidden relative">
     <div class="px-6 sm:px-20 text-center mb-12">
       <h2 class="title48 mb-4">Nos formules d'accompagnement</h2>
       <p class="text20 text-gray">Une offre adaptée à chaque étape de votre croissance</p>
