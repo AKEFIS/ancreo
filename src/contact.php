@@ -1,98 +1,99 @@
 <?php include 'components/header.php'; ?>
 <title>Contact</title>
 <meta name="description" content="Contactez l’agence Ancreo à La Rochelle : questions, demandes de devis, accompagnement, création ou refonte de site web. Notre équipe vous répond rapidement.">
+<script src="/src/js/contact.js" defer></script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact – Ancreo",
-  "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/contact",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Ancreo",
-    "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+33 7 37 94 27 65",
-      "contactType": "customer service",
-      "email": "contact@agence-ancreo.lpmiaw.univ-lr.fr",
-      "availableLanguage": ["French"]
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact – Ancreo",
+    "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Ancreo",
+      "url": "https://agence-ancreo.lpmiaw.univ-lr.fr/",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33 7 37 94 27 65",
+        "contactType": "customer service",
+        "email": "contact@agence-ancreo.lpmiaw.univ-lr.fr",
+        "availableLanguage": ["French"]
+      }
     }
   }
-}
 </script>
 <?php include 'components/navbar.php'; ?>
 
-  <main class="p-4 my-4">
-    <hgroup class="text-center mb-24">
-      <h1 class="title32 text-accentuationSombre">Contactez-nous !</h1>
-      <h2 class="title32">Nous sommes là pour vous aider</h2>
-    </hgroup>
-    <!-- Conteneur de message de succès général -->
-    <div id="contact-success" class="hidden text-green-700 bg-green-100 border border-green-200 rounded p-4 mb-6 text18" role="status" aria-live="polite"></div>
+<main class="p-4 my-4">
+  <hgroup class="text-center mb-24">
+    <h1 class="title32 text-accentuationSombre">Contactez-nous !</h1>
+    <h2 class="title32">Nous sommes là pour vous aider</h2>
+  </hgroup>
+  <!-- Conteneur de message de succès général -->
+  <div id="contact-success" class="hidden text-green-700 bg-green-100 border border-green-200 rounded p-4 mb-6 text18" role="status" aria-live="polite"></div>
 
-    <form
-      id="contact-form"
-      action="./processContact.php" method="POST" class="flex flex-col gap-6 text24 sm:flex-row sm:flex-wrap sm:gap-0 sm:justify-between lg:max-w-5xl lg:mx-auto">
-      <div class="flex flex-col sm:w-[48%] sm:mb-8">
-        <div class="field-error text-red-600 text-sm mb-1 min-h-[1rem]" data-for="nom" aria-live="polite"></div>
-        <label for="nom">Nom et prénom :</label>
-        <input
-          class="bg-white text-black rounded-2xl p-4"
-          type="text"
-          id="nom"
-          name="nom"
-          placeholder="Ex : John Smith" />
-      </div>
+  <form
+    id="contact-form"
+    action="/src/processContact.php" method="POST" class="flex flex-col gap-6 text24 sm:flex-row sm:flex-wrap sm:gap-0 sm:justify-between lg:max-w-5xl lg:mx-auto">
+    <div class="flex flex-col sm:w-[48%] sm:mb-8">
+      <div class="field-error text-red-600 text-sm mb-1 min-h-[1rem]" data-for="nom" aria-live="polite"></div>
+      <label for="nom">Nom et prénom :</label>
+      <input
+        class="bg-white text-black rounded-2xl p-4"
+        type="text"
+        id="nom"
+        name="nom"
+        placeholder="Ex : John Smith" />
+    </div>
 
-      <div class="flex flex-col sm:w-[48%] sm:mb-8">
-        <div class="field-error text-red-600 text-sm mb-1 min-h-[1rem]" data-for="email" aria-live="polite"></div>
-        <label for="email">Email :</label>
-        <input
-          class="bg-white text-black rounded-2xl p-4"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Ex : example@gmail.com" />
-      </div>
+    <div class="flex flex-col sm:w-[48%] sm:mb-8">
+      <div class="field-error text-red-600 text-sm mb-1 min-h-[1rem]" data-for="email" aria-live="polite"></div>
+      <label for="email">Email :</label>
+      <input
+        class="bg-white text-black rounded-2xl p-4"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Ex : example@gmail.com" />
+    </div>
 
-      <div class="flex flex-col sm:w-[48%] sm:mb-8">
-        <div class="field-error text-red-600 text-sm mb-1 min-h-[1rem]" data-for="telephone" aria-live="polite"></div>
-        <label for="telephone">Numéro de téléphone :</label>
-        <input
-          class="bg-white text-black rounded-2xl p-4"
-          type="tel"
-          id="telephone"
-          name="telephone"
-          placeholder="Ex : 07 37 94 27 65" />
-      </div>
+    <div class="flex flex-col sm:w-[48%] sm:mb-8">
+      <div class="field-error text-red-600 text-sm mb-1 min-h-[1rem]" data-for="telephone" aria-live="polite"></div>
+      <label for="telephone">Numéro de téléphone :</label>
+      <input
+        class="bg-white text-black rounded-2xl p-4"
+        type="tel"
+        id="telephone"
+        name="telephone"
+        placeholder="Ex : 07 37 94 27 65" />
+    </div>
 
-      <div class="flex flex-col sm:w-[48%] sm:mb-8">
-        <div class="field-error text-red-600 text-sm mb-1 min-h-[1rem]" data-for="objet" aria-live="polite"></div>
-        <label for="objet">Objet :</label>
-        <input
-          class="bg-white text-black rounded-2xl p-4"
-          type="text"
-          id="objet"
-          name="objet"
-          placeholder="Ex : Demande de stage" />
-      </div>
+    <div class="flex flex-col sm:w-[48%] sm:mb-8">
+      <div class="field-error text-red-600 text-sm mb-1 min-h-[1rem]" data-for="objet" aria-live="polite"></div>
+      <label for="objet">Objet :</label>
+      <input
+        class="bg-white text-black rounded-2xl p-4"
+        type="text"
+        id="objet"
+        name="objet"
+        placeholder="Ex : Demande de stage" />
+    </div>
 
-      <div class="flex flex-col sm:basis-full sm:mb-8">
-        <div class="field-error text-red-600 text-sm mb-1 min-h-[1rem]" data-for="message" aria-live="polite"></div>
-        <label for="message">Message :</label>
-        <textarea
-          class="bg-white text-black rounded-2xl p-4 min-h-40"
-          id="message"
-          name="message"
-          placeholder="Dites nous comment nous pouvons vous aider"></textarea>
-      </div>
+    <div class="flex flex-col sm:basis-full sm:mb-8">
+      <div class="field-error text-red-600 text-sm mb-1 min-h-[1rem]" data-for="message" aria-live="polite"></div>
+      <label for="message">Message :</label>
+      <textarea
+        class="bg-white text-black rounded-2xl p-4 min-h-40"
+        id="message"
+        name="message"
+        placeholder="Dites nous comment nous pouvons vous aider"></textarea>
+    </div>
 
-      <button
-        class="bg-white cursor-pointer text-black rounded-3xl px-8 py-4 self-center"
-        type="submit">
-        Envoyer le message
-      </button>
-    </form>
-  </main>
-  <?php include('components/footer.php') ?>
+    <button
+      class="bg-white cursor-pointer text-black rounded-3xl px-8 py-4 self-center"
+      type="submit">
+      Envoyer le message
+    </button>
+  </form>
+</main>
+<?php include('components/footer.php') ?>

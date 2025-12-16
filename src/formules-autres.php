@@ -1,125 +1,107 @@
 <?php include('components/header.php'); ?>
-<title>Autres Formules</title>
-<meta name="description" content="Découvrez les autres formules d’Ancreo : solutions sur mesure, refonte complète de site et maintenance continue. Des services personnalisés pour répondre aux besoins spécifiques de votre projet web.">
+<title>Solutions Sur Mesure, Refonte & Maintenance - Ancreo</title>
+<meta name="description" content="Découvrez les solutions personnalisées d’Ancreo : développement sur mesure, refonte de site web et maintenance technique. Des services adaptés à vos enjeux spécifiques.">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Autres Formules – Ancreo",
-  "description": "Découvrez nos formules personnalisées : Formule sur mesure, Formule Refonte et Formule Maintenance, adaptées aux besoins spécifiques de votre projet web.",
-  "hasPart": [
-    {
-      "@type": "Service",
-      "name": "Formule sur mesure",
-      "description": "Solution parfaitement adaptée aux besoins spécifiques du client, incluant définition des objectifs, fonctionnalités uniques et développement sur mesure."
-    },
-    {
-      "@type": "Service",
-      "name": "Formule Refonte",
-      "description": "Renouvellement de votre image en ligne, modernisation du design, optimisation de l'expérience utilisateur et intégration des dernières technologies."
-    },
-    {
-      "@type": "Service",
-      "name": "Formule Maintenance",
-      "description": "Suivi régulier des performances, mises à jour de sécurité et assistance technique pour assurer le bon fonctionnement et la sécurité de votre site."
-    }
-  ]
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Autres Formules – Ancreo",
+    "description": "Découvrez nos formules personnalisées : Formule sur mesure, Formule Refonte et Formule Maintenance.",
+    "hasPart": [{
+        "@type": "Service",
+        "name": "Formule sur mesure",
+        "description": "Solution parfaitement adaptée aux besoins spécifiques du client, incluant définition des objectifs, fonctionnalités uniques et développement sur mesure."
+      },
+      {
+        "@type": "Service",
+        "name": "Formule Refonte",
+        "description": "Renouvellement de votre image en ligne, modernisation du design, optimisation de l'expérience utilisateur et intégration des dernières technologies."
+      },
+      {
+        "@type": "Service",
+        "name": "Formule Maintenance",
+        "description": "Suivi régulier des performances, mises à jour de sécurité et assistance technique pour assurer le bon fonctionnement et la sécurité de votre site."
+      }
+    ]
+  }
 </script>
 
 <?php include('components/navbar.php'); ?>
-  <!-- Hero Section -->
-  <section class="py-16 px-6">
-    <div class="max-w-7xl mx-auto text-center">
-      <h1 class="title64 text-gray mb-6 hero-title">Autres Formules</h1>
-      <p class="text16 text-gray hero-subtitle">Notre formule faites spécialement pour vous</p>
+
+<section class="py-16 px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <h1 class="title64 text-gray mb-6 hero-title">Solutions Spécifiques</h1>
+    <p class="text24 text-gray hero-subtitle">L'expertise <strong class="text-accentuationClair font-extrabold">Sur Mesure</strong> pour vos défis uniques</p>
+  </div>
+</section>
+
+<section class="py-12 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="bg-gray rounded-3xl p-12 approche-card">
+      <h2 class="title32 text-black mb-6">Notre Approche</h2>
+      <div class="w-16 h-0.5 bg-black mb-6"></div>
+
+      <p class="text16 text-black mb-6 leading-relaxed">
+        Nous transformons votre vision en <strong class="text-accentuationClair font-extrabold">réalité technique</strong> grâce à une flexibilité totale. Que vous ayez besoin d'innover, de rénover ou de sécuriser, notre équipe s'adapte à votre contexte.
+      </p>
+
+      <p class="text16 text-black leading-relaxed">
+        En combinant écoute active et <strong class="text-accentuationClair font-extrabold">expertise pointue</strong>, nous créons des solutions qui ne rentrent pas dans les cases, mais qui répondent exactement à vos exigences. Chaque projet est une opportunité de <strong class="text-accentuationClair font-extrabold">surpasser vos objectifs</strong>.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Notre Approche -->
-  <section class="py-12 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="bg-gray rounded-3xl p-12 approche-card">
-        <h2 class="title32 text-black mb-6">Notre Approche</h2>
-        <div class="w-16 h-0.5 bg-black mb-6"></div>
+<section class="py-12 px-6">
+  <div class="max-w-7xl mx-auto border border-gray rounded-3xl p-12 bg-black">
 
-        <p class="text16 text-black mb-6 leading-relaxed">
-          Nous transformons votre vision en stratégie concrète grâce à une méthodologie éprouvée et des années d'expertise
-          dans le domaine. Notre équipe d'experts vous accompagne à chaque étape de votre développement pour garantir des
-          résultats mesurables et durables.
-        </p>
+    <h2 class="title32 text-gray mb-2">Formule Sur Mesure</h2>
+    <div class="w-16 h-0.5 bg-gray mb-12"></div>
 
-        <p class="text16 text-black leading-relaxed">
-          En combinant analyse approfondie, innovation technologique et compréhension fine de votre secteur, nous créons des
-          solutions sur mesure qui propulsent votre entreprise vers de nouveaux sommets. Chaque projet est unique et mérite
-          une attention particulière adaptée à vos objectifs spécifiques.
-        </p>
-      </div>
+    <div class="bg-gray rounded-3xl p-12 mb-16 formule-card">
+      <div class="w-6 h-6 bg-black transform rotate-45 mb-6"></div>
+      <h3 class="title24 text-black mb-6">Votre projet, sans compromis</h3>
+
+      <p class="text16 text-black leading-relaxed">
+        Ne vous limitez pas aux standards du marché. Avec notre formule sur mesure, nous concevons une solution qui s'aligne <strong class="text-accentuationClair font-extrabold">parfaitement</strong> avec votre business model. Fonctionnalités complexes, API spécifiques ou design avant-gardiste : nous développons l'outil <strong class="text-accentuationClair font-extrabold">unique</strong> dont vous avez besoin.
+      </p>
     </div>
-  </section>
 
-  <!-- Formules -->
-  <section class="py-12 px-6">
-    <div class="max-w-7xl mx-auto border border-gray rounded-3xl p-12 bg-black">
+    <h2 class="title32 text-gray mb-2">Formule Refonte</h2>
+    <div class="w-16 h-0.5 bg-gray mb-12"></div>
 
-      <!-- Formule sur mesure -->
-      <h2 class="title32 text-gray mb-2">Formule sur mesure</h2>
-      <div class="w-16 h-0.5 bg-gray mb-12"></div>
+    <div class="bg-gray rounded-3xl p-12 mb-16 formule-card">
+      <div class="w-6 h-6 bg-black transform rotate-45 mb-6"></div>
+      <h3 class="title24 text-black mb-6">Modernisez votre image</h3>
 
-      <div class="bg-gray rounded-3xl p-12 mb-16 formule-card">
-        <div class="w-6 h-6 bg-black transform rotate-45 mb-6"></div>
-        <h3 class="title24 text-black mb-6">Adaptez votre projet à vos exigences précises</h3>
-
-        <p class="text16 text-black leading-relaxed">
-          Créez une solution parfaitement adaptée à vos besoins spécifiques avec notre formule sur mesure.
-          Nous collaborons étroitement avec vous pour définir vos objectifs, concevoir des fonctionnalités
-          uniques et développer un site ou une application qui répond aux exigences de votre entreprise.
-        </p>
-      </div>
-
-      <!-- Formule Refonte -->
-      <h2 class="title32 text-gray mb-2">Formule Refonte</h2>
-      <div class="w-16 h-0.5 bg-gray mb-12"></div>
-
-      <div class="bg-gray rounded-3xl p-12 mb-16 formule-card">
-        <div class="w-6 h-6 bg-black transform rotate-45 mb-6"></div>
-        <h3 class="title24 text-black mb-6">Renouvelez votre image en ligne</h3>
-
-        <p class="text16 text-black leading-relaxed">
-          Offrez un nouvel élan à votre présence en ligne avec notre formule refonte.
-          Nous analysons votre site existant pour identifier les opportunités d'amélioration :
-          moderniser le design, optimiser l'expérience utilisateur et intégrer les dernières technologies
-          pour revitaliser votre site.
-        </p>
-      </div>
-
-      <!-- Formule Maintenance -->
-      <h2 class="title32 text-gray mb-2">Formule Maintenance</h2>
-      <div class="w-16 h-0.5 bg-gray mb-12"></div>
-
-      <div class="bg-gray rounded-3xl p-12 formule-card">
-        <div class="w-6 h-6 bg-black transform rotate-45 mb-6"></div>
-        <h3 class="title24 text-black mb-6">Assurez la pérennité et la sécurité de votre site</h3>
-
-        <p class="text16 text-black leading-relaxed">
-          Assurez le bon fonctionnement et la sécurité de votre site avec notre formule de maintenance.
-          Nous proposons un suivi régulier des performances, des mises à jour de sécurité et une assistance
-          technique pour garantir un site opérationnel et performant.
-        </p>
-      </div>
-
+      <p class="text16 text-black leading-relaxed">
+        Votre site ne convertit plus ? Offrez-lui une <strong class="text-accentuationClair font-extrabold">nouvelle jeunesse</strong>. Nous analysons l'existant pour identifier les points de friction et reconstruisons une interface moderne, rapide et optimisée pour l'<strong class="text-accentuationClair font-extrabold">expérience utilisateur (UX)</strong>. Transformez votre site vieillissant en un levier de croissance.
+      </p>
     </div>
-  </section>
 
-  <!-- Call to Action -->
-  <section class="py-16 px-6">
-    <div class="max-w-7xl mx-auto bg-gray rounded-3xl p-16 text-center cta-section">
-      <h2 class="title48 text-black mb-6">Prêt à démarrer ?</h2>
-      <p class="text16 text-black mb-10">Contactez-nous dès aujourd'hui pour une consultation gratuite</p>
-      <button class="bg-black text-gray text16 px-12 py-4 rounded-full cta-button font-bold">
-        NOUS CONTACTER
-      </button>
+    <h2 class="title32 text-gray mb-2">Formule Maintenance</h2>
+    <div class="w-16 h-0.5 bg-gray mb-12"></div>
+
+    <div class="bg-gray rounded-3xl p-12 formule-card">
+      <div class="w-6 h-6 bg-black transform rotate-45 mb-6"></div>
+      <h3 class="title24 text-black mb-6">Sérénité et Performance</h3>
+
+      <p class="text16 text-black leading-relaxed">
+        Ne laissez pas les bugs ou les failles de sécurité ralentir votre activité. Nous assurons la <strong class="text-accentuationClair font-extrabold">pérennité</strong> de votre site grâce à un suivi régulier, des mises à jour préventives et une assistance technique réactive. Dormez sur vos deux oreilles, nous veillons sur votre <strong class="text-accentuationClair font-extrabold">outil de travail</strong>.
+      </p>
     </div>
-  </section>
+
+  </div>
+</section>
+
+<section class="py-16 px-6">
+  <div class="max-w-7xl mx-auto bg-gray rounded-3xl p-16 text-center cta-section">
+    <h2 class="title48 text-black mb-6">Vous avez un projet spécifique ?</h2>
+    <p class="text16 text-black mb-10">Parlez-nous de vos défis, nous avons la <strong class="text-accentuationClair font-extrabold">solution technique</strong>.</p>
+    <button class="bg-black text-gray text16 px-12 py-4 rounded-full cta-button font-bold hover:scale-105 transition-transform duration-300">
+      NOUS CONTACTER
+    </button>
+  </div>
+</section>
 
 <?php include 'components/footer.php'; ?>
