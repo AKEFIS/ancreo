@@ -86,7 +86,7 @@
         class="bg-white text-black rounded-2xl p-4 min-h-40"
         id="message"
         name="message"
-        placeholder="Dites nous comment nous pouvons vous aider"></textarea>
+        placeholder="Dites-nous comment nous pouvons vous aider."></textarea>
     </div>
 
     <button

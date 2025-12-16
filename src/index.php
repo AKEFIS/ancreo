@@ -12,8 +12,8 @@ $style_acc_content = "accordion-content overflow-hidden h-0";
 // Note : 'flex flex-col' pour la structure verticale, 'w-[85vw] sm:w-[400px]' pour la taille
 $style_card = "carousel-card w-[85vw] sm:w-[400px] flex-shrink-0 bg-lightBlack border-2 border-blue-500 rounded-xl p-6 shadow-2xl cursor-pointer flex flex-col";
 
-// Style du bouton dans la carte
-$style_card_btn = "w-full bg-blue-500 text-white py-3 rounded-full hover:bg-blue-600 font-semibold mt-auto transition-colors";
+// Style du bouton dans la carte (MODIFIÉ : ajout de 'block text-center' pour la balise <a>)
+$style_card_btn = "w-full bg-blue-500 text-white py-3 rounded-full hover:bg-blue-600 font-semibold mt-auto transition-colors block text-center";
 
 // Style des boutons de navigation (< >)
 $style_nav_btn = "bg-lightBlack border border-gray text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-blue-500 hover:border-blue-500 transition-all active:scale-95";
@@ -52,7 +52,8 @@ $carouselCards = [
       "Accès à une <strong class='text-accentuationSombre font-extrabold'>communauté</strong> d'entrepreneur"
     ],
     "optionnels" => ["Mentorat", "Formation continue"],
-    "cta" => "En savoir plus"
+    "cta" => "En savoir plus",
+    "link" => "formule-globale"
   ],
   [
     "title" => "Formule Premium",
@@ -69,7 +70,8 @@ $carouselCards = [
       "Conseils juridiques (RGPD, politique d’expédition et de retour, etc)",
       "Assistance comptable pour la gestion des ventes et des taxes"
     ],
-    "cta" => "En savoir plus"
+    "cta" => "En savoir plus",
+    "link" => "formule-premium"
   ],
   [
     "title" => "Formule Avancée",
@@ -84,7 +86,8 @@ $carouselCards = [
       "Support juridique pour la conformité réglementaire",
       "Aide à la mise en place d’un plan de marketing digital"
     ],
-    "cta" => "En savoir plus"
+    "cta" => "En savoir plus",
+    "link" => "formule-avancee"
   ],
   [
     "title" => "Formule Basique",
@@ -100,37 +103,43 @@ $carouselCards = [
       "<strong class='text-accentuationSombre font-extrabold'>Maintenance technique</strong> pendant 6 mois",
       "Options de mise à jour du contenu"
     ],
-    "cta" => "En savoir plus"
+    "cta" => "En savoir plus",
+    "link" => "formule-basique"
   ],
   [
     "title" => "Formule Sur mesure",
     "type" => "text",
     "subtitle" => "Vous avez d’autres besoins ?",
     "desc" => "Prenez contact avec notre équipe et nous vous proposerons une formule <strong class='text-accentuationSombre font-extrabold'>sur mesure</strong> qui répondra au mieux à toutes vos attentes !",
-    "cta" => "Nous contacter"
+    "cta" => "En savoir plus",
+    "link" => "formules-autres"
   ],
   [
     "title" => "Formule Refonte",
     "type" => "text",
     "subtitle" => "Votre application se fait vieillissante ?",
     "desc" => "Contactez-nous et nous déterminerons les <strong class='text-accentuationSombre font-extrabold'>meilleurs choix</strong> pour votre business !",
-    "cta" => "Nous contacter"
+    "cta" => "En savoir plus",
+    "link" => "formules-autres"
   ],
   [
     "title" => "Formule Maintenance",
     "type" => "text",
     "subtitle" => "Vous avez d’autres besoins ?",
     "desc" => "Prenez contact avec notre équipe et nous vous proposerons une formule de <strong class='text-accentuationSombre font-extrabold'>maintenance adaptée</strong> à vos besoins !",
-    "cta" => "Nous contacter"
+    "cta" => "En savoir plus",
+    "link" => "formules-autres"
   ]
 ];
+
+// NOTE: J'ai mis à jour les liens "link" ci-dessus pour qu'ils pointent vers des pages différentes si nécessaire. 
+// Assurez-vous que les fichiers (ex: formule-premium.php) existent bien.
 
 include 'components/header.php';
 
 ?>
 <title>Accueil</title>
 <meta name="description" content="Ancreo, agence web à La Rochelle : création de sites web, refonte, e-commerce, développement sur mesure et accompagnement complet pour entrepreneurs, start-up et entreprises. Découvrez nos formules adaptées à chaque étape de votre croissance.">
-<!-- THREE.JS -->
 <script type="importmap">
   {
     "imports": {
@@ -140,7 +149,6 @@ include 'components/header.php';
     }
 </script>
 
-<!-- SCRIPTS -->
 <script type="module" src="./src/js/index/hero.js" defer></script>
 <script type="module" src="./src/js/index/index.js" defer></script>
 <script type="module" src="./src/js/index/carousel.js" defer></script>
@@ -265,9 +273,10 @@ include 'components/header.php';
                 <?php endif; ?>
               </div>
 
-              <button class="<?= $style_card_btn; ?>">
+              <a href="<?= $card['link'] ?>" class="<?= $style_card_btn; ?>">
                 <?= $card['cta']; ?>
-              </button>
+              </a>
+
             </div>
           <?php endforeach; ?>
 
