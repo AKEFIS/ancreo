@@ -1,6 +1,7 @@
 <?php include('components/header.php'); ?>
 <title>Formule Basique - Votre Site Vitrine Clé en Main</title>
 <meta name="description" content="Découvrez la Formule Basique d’Ancreo : création de site vitrine optimisé, formulaire de contact, SEO, formation, hébergement et nom de domaine. La solution idéale pour lancer votre présence en ligne.">
+<script type="module" src="./src/js/formules.js" defer></script>
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",

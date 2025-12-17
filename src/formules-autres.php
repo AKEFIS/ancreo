@@ -1,6 +1,7 @@
 <?php include('components/header.php'); ?>
 <title>Solutions Sur Mesure, Refonte & Maintenance - Ancreo</title>
 <meta name="description" content="Découvrez les solutions personnalisées d’Ancreo : développement sur mesure, refonte de site web et maintenance technique. Des services adaptés à vos enjeux spécifiques.">
+<script type="module" src="./src/js/formules.js" defer></script>
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",

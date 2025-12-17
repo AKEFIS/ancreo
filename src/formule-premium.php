@@ -1,6 +1,7 @@
 <?php include('components/header.php'); ?>
 <title>Formule Premium - Votre E-Commerce Clé en Main</title>
 <meta name="description" content="Découvrez la Formule Premium d’Ancreo : création de boutique E-Commerce performante, étude de marché, hébergement, formation et accompagnement juridique. Lancez vos ventes en ligne.">
+<script type="module" src="./src/js/formules.js" defer></script>
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
