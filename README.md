@@ -1,42 +1,52 @@
-# Agence
+# Site Web Agence Ancreo
 
-Site web de l'agence Ancreo
-Lien vers le figma : [figma](https://www.figma.com/design/0Jr37Ma4IllMO3V0Xw1HWD/Ancreo?node-id=0-1&t=gXzLrWPXjomH9BaT-1)
+<img src="./demo.gif" alt="Gif représentant la home-page du site.">
 
-## Getting started
+## Description
+Ceci est le repository officiel du site web de l'agence Ancreo. <br>
+Ancreo est une agence fictive créée dans le cadre des projets tutorés de la licence professionnelle MIAW (Métiers de l'Informatique et Applications Web).
 
-Pour demarer le projet juste **npm run dev** pour lancer le build tailwind.
+### Membres du groupe
+- [Labourdere Lea](https://github.com/lealabou) - Développeuse Full Stack
+- [Curtil Maxime](https://github.com/akefis) - Développeur Full Stack
+- [Hardel Sean](https://github.com/hardelSean) - Développeur Full Stack
+- [Safsafi Yacine](https://github.com/Yacesf) - Développeur Full Stack
+- [Bonhomme Elouan](https://github.com/BonhommeE) - Développeur Full Stack
 
-# Planification
+[Accéder au site web.](https://agence-ancreo.lpmiaw.univ-lr.fr/)
 
-## Page accueil
+[Accéder au figma du projet.](https://www.figma.com/design/0Jr37Ma4IllMO3V0Xw1HWD/Ancreo?node-id=0-1&t=gXzLrWPXjomH9BaT-1)
 
-### Header:
+## Installation
 
-- Faire la navbar
-- Trouver l'idee du hero
+### Prérequis
 
-### Qui sommes nous:
+- Serveur Apache
+- PHP
+- Node
 
-- Cartes et animation js
+### Étapes d’installation
 
-### Cards Formules:
+Clonez le repo et installez les dépendances :
+```bash
+git clone git@gitlab.univ-lr.fr:lpmiaw-2025-2026/ancreo/agence.git
+cd agence
+npm install --production
+```
 
-- Cartes et animation js
+Se placer à la racine et exécuter la commande pour compiler le CSS :
+```bash
+npm run build
+```
 
-### Footer
+## Tech Stack
+Voici la liste des technologies utilisées dans ce projet :
 
-- Faire le footer
-- Integration map google
+- PHP
+- Tailwind
+- GSAP
+- JS
+- ThreeJS
 
-## Page Formule
-
-- Une page par formule ou un template avec texte defini ailleurs
-
-## Page Realisations
-
-## Page Realisation
-
-## Page Contact
-
-- Relier le formulaire au webhook discord
+## Licence
+Ce projet est distribué sous licence MIT.
