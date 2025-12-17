@@ -205,9 +205,7 @@ include 'components/header.php';
   <section id="qui-sommes-nous" class="px-6 sm:px-20 py-20 bg-lightBlack">
     <h2 class="title48 mb-6">Qui sommes-nous ?</h2>
     <p class="text20 leading-relaxed max-w-2xl mb-12">
-      Notre agence propose un accompagnement personnalisé et adapté pour les
-      <strong class="text-accentuationSombre">entreprises, start-up, futurs entrepreneurs</strong>
-      et bien plus !
+      Donnez vie à vos ambitions : nous offrons un <strong class="text-accentuationSombre">suivi unique</strong> adapté à tous les porteurs de projets, des grands groupes aux <strong class="text-accentuationSombre">futurs entrepreneurs</strong>.
     </p>
 
     <div id="accordion" class="space-y-4">
