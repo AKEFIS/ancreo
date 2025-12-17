@@ -52,6 +52,14 @@
     color: var(--accentuationClair);
   }
 
+  .hover\:text-accentuationSombre:hover {
+    color: var(--accentuationSombre);
+  }
+
+  .hover\:text-accentuationClair:hover {
+    color: var(--accentuationClair);
+  }
+
   .border-black {
     border-color: var(--black);
   }
