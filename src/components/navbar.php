@@ -28,32 +28,22 @@
             class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4.5rem] border-l-transparent border-r-[4.5rem] border-r-transparent border-b-[1.5rem] b-black opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
           <ul
             id="submenu-desktop"
-            class="absolute left-0 top-full opacity-0 pointer-events-none bg-white text-black shadow-lg w-48">
-            <a href="/formule-globale">
-              <li class="hover:bg-gray-200 px-4 py-2">
-                <p>Formule Globale</p>
-              </li>
-            </a>
-            <a href="/formule-premium">
-              <li class="hover:bg-gray-200 px-4 py-2">
-                <p>Formule Premium</p>
-              </li>
-            </a>
-            <a href="/formule-avancee">
-              <li class="hover:bg-gray-200 px-4 py-2">
-                <p>Formule Avancée</p>
-              </li>
-            </a>
-            <a href="/formule-basique">
-              <li class="hover:bg-gray-200 px-4 py-2">
-                <p>Formule Basique</p>
-              </li>
-            </a>
-            <a href="/formules-autres">
-              <li class="hover:bg-gray-200 px-4 py-2">
-                <p>Autre formules</p>
-              </li>
-            </a>
+            class="absolute left-0 top-full -translate-x-1/2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto -translate-y-2 group-hover:translate-y-0 transition-all duration-200 bg-white text-black shadow-lg rounded-lg w-48 overflow-hidden z-50 ring-1 ring-black/10">
+            <li>
+              <a href="/formule-globale" class="block px-4 py-3 text20 hover:bg-gray-100">Formule Globale</a>
+            </li>
+            <li>
+              <a href="/formule-premium" class="block px-4 py-3 text20 hover:bg-gray-100">Formule Premium</a>
+            </li>
+            <li>
+              <a href="/formule-avancee" class="block px-4 py-3 text20 hover:bg-gray-100">Formule Avancée</a>
+            </li>
+            <li>
+              <a href="/formule-basique" class="block px-4 py-3 text20 hover:bg-gray-100">Formule Basique</a>
+            </li>
+            <li>
+              <a href="/formules-autres" class="block px-4 py-3 text20 hover:bg-gray-100">Autres formules</a>
+            </li>
           </ul>
         </li>
         <li
@@ -139,7 +129,7 @@
               </a>
               <a href="/formules-autres" class="text-white text24">
                 <li class="px-4 py-3">
-                  <p>Autre formules</p>
+                  <p>Autres formules</p>
                 </li>
               </a>
             </ul>
