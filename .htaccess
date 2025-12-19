@@ -3,5 +3,21 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 
+# RewriteRule ^$ src/index.php [L]
+
 # Sert a reecrire l'url -> ancreo/page.html devient ancreo/page
 RewriteRule ^([^/]+)$ $1.html [L]
+
+# Réécriture des URL
+RewriteRule ^realisations$ src/realisations.php [L]
+RewriteRule ^contact$ src/contact.php [L]
+
+RewriteRule ^formule-avancee$ src/formule-avancee.php [L]
+RewriteRule ^formule-basique$ src/formule-basique.php [L]
+RewriteRule ^formule-globale$ src/formule-globale.php [L]
+RewriteRule ^formule-premium$ src/formule-premium.php [L]
+RewriteRule ^formules-autres$ src/formules-autres.php [L]
+
+RewriteRule ^$ src/index.php [L]
+
+ErrorDocument 404 /src/404.php
