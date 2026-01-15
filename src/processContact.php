@@ -1,7 +1,7 @@
 <?php
 
 // Webhook Discord
-$webhookUrl = 'https://discord.com/api/webhooks/1422502395065405451/VxZQHWmis8YWhdO_-9YESLTU7TzlVRVBRJ4Iw15pKIbwmLgWK7AOYSdaf1y_52zD_sAg';
+$webhookUrl = '';
 
 // Helper pour renvoyer une réponse JSON et terminer le script
 function send_json_response(array $payload, int $httpCode = 200): void
